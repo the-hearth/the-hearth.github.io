@@ -9,10 +9,11 @@
 		    <h3 class="mdl-card__title-text">{{ reviewData.title }}</h3>		    
 		  </div>
 		  <div class="mdl-card__supporting-text">
-		    <p><strong>Review by: </strong>{{ reviewData.name }}, {{ reviewData.address }}</p>
-		    <a href={{ reviewData.website }}>{{ reviewData.website }}</a>
+		    <p><strong>Review by: </strong>{{ reviewData.name }}, {{ reviewData.address }} </br>
+			  <a href={{ reviewData.website }}>{{ reviewData.website }}</a>
+	 	    </p>		    
 		    <div class="review__description">
-		    	{{ reviewData.description | markdownify }}
+			<p> </br> {{ reviewData.description | markdownify }} </p>
 		    </div>
 		  </div>
 		</article>
