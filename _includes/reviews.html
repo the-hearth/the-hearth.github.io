@@ -6,11 +6,11 @@
 
 		<article class="review mdl-card mdl-shadow--2dp">
 		  <div class="mdl-card__title">
-		    <h3 class="mdl-card__title-text">{{ reviewData.title }}, {{ reviewData.address }}</h3>
-		    <a class="mdl-card__title-text">{{ reviewData.website }}</a>
+		    <h3 class="mdl-card__title-text">{{ reviewData.title }}</h3>		    
 		  </div>
 		  <div class="mdl-card__supporting-text">
-		    <p><strong>Review by: </strong>{{ reviewData.name }}</p>
+		    <p><strong>Review by: </strong>{{ reviewData.name }}, {{ reviewData.address }}</p>
+		    <a href={{ reviewData.website }}>{{ reviewData.website }}</a>
 		    <div class="review__description">
 		    	{{ reviewData.description | markdownify }}
 		    </div>
