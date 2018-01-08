@@ -6,18 +6,14 @@
 
 		<article class="review mdl-card mdl-shadow--2dp">
 		  <div class="mdl-card__title">
-		    <h3 class="mdl-card__title-text">{{ reviewData.title reviewData.address }}</h3>
+		    <h3 class="mdl-card__title-text">{{ reviewData.title }}, {{ reviewData.address }}</h3>
+		    <a class="mdl-card__title-text">{{ reviewData.website }}</a>
 		  </div>
 		  <div class="mdl-card__supporting-text">
 		    <p><strong>Review by: </strong>{{ reviewData.name }}</p>
 		    <div class="review__description">
 		    	{{ reviewData.description | markdownify }}
 		    </div>
-		  </div>
-		  <div class="mdl-card__actions mdl-card--border">
-		    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="www.airbnb.co.in">
-		      Rate us on Airbnb
-		    </a>
 		  </div>
 		</article>
 	{% endfor %}
