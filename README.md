@@ -1,1 +1,0 @@
-# the-hearth.github.io
