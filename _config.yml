@@ -1,0 +1,23 @@
+# Site settings
+title: The Hearth
+email: thehearthstays@gmail.com
+description: Test
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://the-hearth.github.io/" # the base hostname & protocol for your site
+twitter_username: 
+github_username:  the-hearth
+movieFormUrl: https://staticman.net/api/v1/entries/5622d244c4bf944a1a3e3001
+
+# Build settings
+markdown: kramdown
+
+# Staticman
+staticman:
+ allowedFields: ['name', 'title', 'description', 'rating']
+ branch: gh-pages
+ commitMessage: "Hey human, here is a new entry."
+ filename: "entry{@timestamp}"
+ format: yml
+ moderation: true
+ path: "_data/reviews"
+requiredFields: ['name', 'title', 'description', 'rating']
