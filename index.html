@@ -15,4 +15,14 @@ layout: default
     {% include reviews.html %}
   </section>
 
+  <section class="constrain">
+  <form class="form" method="POST" action="https://api.staticman.net/v1/entry/the-hearth/the-hearth.github.io/master">
+    <input name="options[redirect]" type="hidden" value="https://the-hearth.github.io/">
+    <!-- e.g. "2016-01-02-this-is-a-post" -->
+    <label><input name="fields[name]" type="text">Name</label>
+    <label><input name="fields[email]" type="email">E-mail</label>
+    <button type="submit">Go!</button>
+  </form>
+  </section>
+
 </div>
