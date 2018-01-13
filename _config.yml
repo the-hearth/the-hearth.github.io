@@ -13,7 +13,7 @@ markdown: kramdown
 
 # Staticman
 staticman:
- allowedFields: ['name', 'title', 'description', 'website', 'address']
+ allowedFields: ['name', 'title', 'description', 'website', 'address', 'photo']
  branch: master
  commitMessage: "Hey human, here is a new entry."
  filename: "entry{@timestamp}"
