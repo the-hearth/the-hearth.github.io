@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+  <section class="constrain">
+    <article class="review mdl-card mdl-shadow--2dp">
+
+      <div class="mdl-card__title">
+        <p class="mdl-card__title-text"><a href="{{ site.baseurl }}{{ post.url }}">
+          {{ page.title }}
+        </a></p>
+      </div>
+
+      <div class="mdl-card__supporting-text">
+        <p>Tags:
+          {% for category in page.categories %}
+            <a href="{{ site.baseurl }}/category/{{ category }}.html">
+              {{ category }}
+            </a> &nbsp {% comment %} non-breaking space {% endcomment %}
+          {% endfor %}
+        </p>
+        <div class="review__description">
+          {{ content }}
+        </div>
+      </div>
+
+    </article>
+  </section>
+</div>
