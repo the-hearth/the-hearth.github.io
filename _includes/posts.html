@@ -1,0 +1,41 @@
+<div class="constrain-left">
+	{% for post in site.posts %}
+		<article class="review mdl-card mdl-shadow--2dp">
+
+			<div class="mdl-card__title">
+				<p class="mdl-card__title-text"><a href="{{ site.baseurl }}{{ post.url }}">
+					{{ post.title }}
+				</a></p>
+			</div>
+
+			<div class="mdl-card__supporting-text">
+				<p>Tags:
+					{% for category in post.categories %}
+						<a href="{{ site.baseurl }}/category/{{ category }}.html">
+							{{ category }}
+						</a> &nbsp {% comment %} non-breaking space {% endcomment %}
+					{% endfor %}
+				</p>
+				<div class="review__description">
+					{{ post.content }}
+				</div>
+			</div>
+
+		</article>
+	{% endfor %}
+</div>
+
+<div class="constrain-right">
+	<article class="review mdl-card mdl-shadow--2dp">
+		<div class="mdl-card__title">
+			<p class="mdl-card__title-text">
+				<a href="{{ site.baseurl }}/category/All.html">
+					Index
+				</a>
+			</p>
+		</div>
+		<div class="mdl-card__supporting-text">
+			{% include posts-list.html %}
+		</div>
+	</article>
+</div>
