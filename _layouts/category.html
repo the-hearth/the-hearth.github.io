@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<section class="constrain">
+  <h3>"{{ page.category }}" posts</br></h3>
+
+  {% for post in site.categories[page.category] %}
+    <article class="review demo-card-square mdl-card mdl-shadow--2dp">
+    	<div class="mdl-card__title">
+        <a href="{{ post.url | absolute_url }}">
+          {{ post.title }}
+        </a>
+      </div>
+
+      <div class="mdl-card__supporting-text">
+        <p>Tags:
+          {% for category in post.categories %}
+            <a href="{{ site.baseurl }}/category/{{ category }}.html">
+              {{ category }}
+            </a> &nbsp {% comment %} non-breaking space {% endcomment %}
+          {% endfor %}
+        </p>
+        <div class="review__description">
+          {{ post.content }}
+        </div>
+      </div>
+    </article>
+  {% endfor %}
+
+</section>
+</div>
