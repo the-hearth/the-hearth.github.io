@@ -1,38 +1,28 @@
-(function ($) {
-  var $comments = $('.js-comments');
+function makeTimer() {
+	var endTime = new Date("February 5, 2018 18:00:00 PDT");
+	var endTime = (Date.parse(endTime)) / 1000;
 
-  $('.js-form').submit(function () {
-    var form = this;
+	var now = new Date();
+	var now = (Date.parse(now) / 1000);
 
-    $(form).addClass('form--loading');
+	var timeLeft = endTime - now;
 
-    $.ajax({
-      type: $(this).attr('method'),
-      url: $(this).attr('action'),
-      data: $(this).serialize(),
-      contentType: 'application/x-www-form-urlencoded',
-      success: function (data) {
-        showModal('Review submitted', 'Thanks for your review! It will show on the site once it has been approved. You can see the pull request <a href="https://github.com/eduardoboucas/popcorn/pulls">here</a>.');
-        $(form).removeClass('form--loading');
-      },
-      error: function (err) {
-        console.log(err);
-        showModal('Error', 'Sorry, there was an error with the submission!');
-        $(form).removeClass('form--loading');
-      }
-    });
+	var days = Math.floor(timeLeft / 86400);
+	var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
+	var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600 )) / 60);
+	var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
 
-    return false;
-  });
+	if (hours < "10") { hours = "0" + hours; }
+	if (minutes < "10") { minutes = "0" + minutes; }
+	if (seconds < "10") { seconds = "0" + seconds; }
 
-  $('.js-close-modal').click(function () {
-    $('body').removeClass('show-modal');
-  });
-
-  function showModal(title, message) {
-    $('.js-modal-title').text(title);
-    $('.js-modal-text').html(message);
-
-    $('body').addClass('show-modal');
+	$("#days").html(days + "<span>Days</span>");
+	$("#hours").html(hours + "<span>Hours</span>");
+	$("#minutes").html(minutes + "<span>Minutes</span>");
+	$("#seconds").html(seconds + "<span>Seconds</span>");
 }
-})(jQuery);
+
+//enabling js after page loads
+$(document).ready(function() {
+	setInterval(function() { makeTimer(); }, 1000);
+});//end of document-ready code
