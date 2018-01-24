@@ -1,13 +1,38 @@
 ---
-layout: default
+layout: null
 ---
-  <section class="hero">
-    <p>Homestay &nbsp&nbsp&nbsp Hostel &nbsp&nbsp&nbsp Journey</p>
-  </section>
+<!DOCTYPE html>
+<html lang="en">
 
-  <section class="constrain unconstrain">
-    <h3></br>Recent Posts</br></h3>
-    {% include posts.html %}
-  </section>
+  <head>
+  	<meta charset="utf-8">
+  	<title>{{ site.title }}</title>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+  </head>
 
-</div>
+  <body>
+    <header>
+      <div id="timer">
+        <div id="coming-soon">Coming soon, in...</div>
+        <div id="days"></div>
+        <div id="hours"></div>
+        <div id="minutes"></div>
+        <div id="seconds"></div>
+      </div>
+    </header>
+
+    <section class="landing">
+      <img src='images/brochure.png' alt="landing image"></img>
+    </section>
+
+    <footer>
+      <p>Meanwhile, write to us: thehearthstays at gmail dot com</p>
+    </footer>
+
+    <!-- jquery-3 -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <!-- custom js -->
+    <script src="js/main.js"></script>
+  </body>
+
+</html>
