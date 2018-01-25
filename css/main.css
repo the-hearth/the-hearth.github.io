@@ -48,35 +48,40 @@ table {
 
 /* custom css starts here... */
 body {
-	font-size: 16px;
+	font-size: 1.25vw;
 	text-align: center;
 }
 header {
 	overflow: hidden;
-	background-color: black; /*rgb(63,81,181)*/
+	background-color: rgba(0, 0, 0, 0.8);
 	color: white;
 }
-header h1 {
-	font-weight: 300;
-	line-height: 1.5;
+/*mobile screen*/
+@media only screen and (max-aspect-ratio:1/1){
+	body {font-size: 3vw;}
 }
-header a {
-	text-decoration: none;
-	color: inherit;
-}
-.landing {
+
+.landing, .mlanding, .mlanding2 {
 	position: relative;
 	top: 0;
 	width: 100vw;
 }
-.landing img {
+.landing img, .mlanding img {
 	width: 100%;
 }
-.front-text {
-	position: absolute;
-	top: 0;
-	z-index: 4;
+.mlanding2 img {
+	width: 80%;
 }
+.mlanding {
+	display: none;
+}
+
+/*mobile screen*/
+@media only screen and (max-aspect-ratio:1/1){
+	.landing {display: none;}
+	.mlanding {display: block;}
+}
+
 footer {
 	position: fixed;
 	bottom: 0;
@@ -95,20 +100,39 @@ footer p {
 header div {
   display: inline-block;
   line-height: 1;
-  padding: 10px 5px;
-  font-size: 40px;
+  padding: 0.8vw 0.4vw;
+  font-size: 3vw;
 }
 header span {
   display: inline-block;
-	padding: 0 5px;
-  font-size: 18px;
+	padding: 0 0.4vw;
+  font-size: 1.3vw;
   color: white;
 }
 #days {
-  font-size: 75px;
+  font-size: 5vw;
   color: #db4844;
 }
 #hours, #minutes, #seconds {
-  font-size: 50px;
+  font-size: 3vw;
   color: #db4844;
+}
+/*mobile screen*/
+@media only screen and (max-aspect-ratio:1/1){
+	header div {
+		padding: 1.5vw 9vw;
+		font-size: 6vw;
+	}
+	header span {
+		padding: 0 0.6vw;
+	  font-size: 2vw;
+	}
+	#days {
+		font-size: 6vw;
+		padding: 1.5vw 0.6vw;
+	}
+	#hours, #minutes, #seconds {
+		font-size: 6vw;
+		padding: 1.5vw 0.6vw;
+	}
 }
