@@ -50,17 +50,73 @@ table {
 body {
 	font-size: 1.25vw;
 	text-align: center;
+	background-image: url('../images/bk1.jpg');
+	background-repeat: repeat;
 }
 header {
 	overflow: hidden;
 	background-color: rgba(0, 0, 0, 0.8);
 	color: white;
+	width: 100vw;
+}
+h1 {
+	font-size: 1.5vw;
+	padding: 1vw;
+	text-align: left;
 }
 /*mobile screen*/
 @media only screen and (max-aspect-ratio:1/1){
 	body {font-size: 3vw;}
 }
 
+/*final home page*/
+#panel-container {
+	position: fixed;
+	top: 5vh;
+	left: 20vw;
+	width: 60vw;
+	height: 91.5vh;
+	overflow: hidden;
+}
+.panel-background {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+}
+.panel-background img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: none;
+}
+
+#panel-content {
+	position: relative;
+	top: 17.5vh;
+	left: 5vw;
+	z-index: 2;
+	width: 49.5vw;
+	height: 60vh;
+	/*border: .1vw dotted black;*/
+	overflow: auto;
+
+}
+#panel-content div {
+	position: relative;
+	top: 1vh;
+	display: none;
+}
+#panel-content img {
+	width: 100%;
+}
+#panel1, #panel-content #panel1 {
+	display: inline-block;
+}
+
+/*countdown page*/
 .landing, .mlanding, .mlanding2 {
 	position: relative;
 	top: 0;
@@ -75,7 +131,6 @@ header {
 .mlanding {
 	display: none;
 }
-
 /*mobile screen*/
 @media only screen and (max-aspect-ratio:1/1){
 	.landing {display: none;}
