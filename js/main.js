@@ -44,12 +44,13 @@ $(document).ready(function() {
 	});
 	$('.panel-background').find('#'+$(current_panel).attr('id')).fadeIn(500);
 
-	//manual scroll for down/up arrow keys
+	//manual!!!!change soon!!!! scroll for down/up arrow keys
   $(document).keydown(function(event) {
 		event.preventDefault();
 		position = $("#panel-content").scrollTop();
 		if(event.which==40){//down arrow
 			$("#panel-content").scrollTop(position+5);
+			//$('#panel-content').animate({ scrollTop: position+5 }, 10);
 		}
 		else if(event.which==34){//pgdn
 			$('#panel-content').scrollTop(position+50);
@@ -67,18 +68,20 @@ $(document).ready(function() {
 		//for scrolling downwards
 		if(position<$("#panel-content").scrollTop()){
 			position = $("#panel-content").scrollTop();
-			if(position >= cum_panelheight - frame_height){
+			if(position >= cum_panelheight - frame_height-5){
+				//alert('this panel is over: '+ $(current_panel).attr('id'));
 				$('.panel-background').find('img:visible').fadeOut(500);
 				//scroll to next, update counters, change background
 				if($(current_panel).next().length>0){
 					$('#panel-content').animate({ scrollTop: cum_panelheight-5 }, 1000);
 					current_panel = $(current_panel).next();
+					//alert('current panel is now: '+ $(current_panel).attr('id'));
 					$('.panel-background').find('#'+$(current_panel).attr('id')).fadeIn(500);
 					cum_panelheight += $(current_panel).outerHeight();
 				}
 				else {//load next page, change background
 					$(current_page).fadeOut(500);
-					if($(current_panel).next().length>0){
+					if($(current_page).next().length>0){
 						current_page = $(current_page).next();
 					}
 					else {
@@ -87,6 +90,7 @@ $(document).ready(function() {
 					$(current_page).fadeIn(1000);
 					//get first panel
 					current_panel = $(current_page).children('div:first');
+					//alert('current panel is now: '+ $(current_panel).attr('id'));
 					cum_panelheight = $(current_panel).outerHeight();
 					$('.panel-background').find('#'+$(current_panel).attr('id')).fadeIn(500);
 					$('#panel-content').animate({ scrollTop: 0 }, 1000);
