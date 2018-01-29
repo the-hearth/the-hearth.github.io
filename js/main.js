@@ -24,52 +24,76 @@ function makeTimer() {
 
 //enabling js after page loads
 $(document).ready(function() {
+
 	//timer
 	setInterval(function() { makeTimer(); }, 1000);
 
-	var pos = $("#panel-content").scrollTop();
-	//scroll on down arrow key press
-  $(document).keydown(function(event) {
-		pos = $("#panel-content").scrollTop();
-		event.preventDefault();
-		if(event.which==40){//or 34?
-			$("#panel-content").scrollTop(pos+5);
-		}
-		else if(event.which==38){//or 33?
-			$("#panel-content").scrollTop(pos-5);
+	//initializing counters for scroll operations
+	var position = $("#panel-content").scrollTop();
+	var current_page = $('#panel-content').find('article:visible');
+	var cum_panelheight = 0;
+	var frame_height = $("#panel-content").innerHeight();
+	var current_panel;
+	$(current_page).children('div').each(function(index,element){
+		cum_panelheight += $(element).outerHeight();
+		if(position<cum_panelheight){
+			current_panel=$(element);
+			//check after making urls //alert('current panel number is: '+$(current_panel).attr('id'));
+			return false;
 		}
 	});
 
-	//listen for scroll reaching bottom of section
+	//manual scroll for down/up arrow keys
+  $(document).keydown(function(event) {
+		event.preventDefault();
+		position = $("#panel-content").scrollTop();
+		if(event.which==40){//down arrow
+			$("#panel-content").scrollTop(position+5);
+		}
+		else if(event.which==34){//pgdn
+			$('#panel-content').scrollTop(position+50);
+		}
+		else if(event.which==38){//up arrow
+			$("#panel-content").scrollTop(position-5);
+		}
+		else if(event.which==33){//pgup
+			$('#panel-content').scrollTop(position-50);
+		}
+	});
+
+	//listen for scroll reaching bottom of a panel/page
 	$('#panel-content').on('scroll', function() {
-		if(pos<$("#panel-content").scrollTop()){//only on scroll down
-			var panelht = $("#panel-content").innerHeight();
-			var scrollht = document.getElementById("panel-content").scrollHeight;
-			pos = $("#panel-content").scrollTop();
-			if(pos+panelht >= scrollht-5){
-				//fadeout current section and scroll to top
-				var back_elem = $('.panel-background').find('img:visible');
-				$(back_elem).fadeOut(500);
-				$("#panel-content").find('#'+back_elem.attr('id')).fadeOut(500);
-				$("#panel-content").animate({scrollTop:0}, '500');
-				pos=scrollht;
-				//fadein next
-				if($(back_elem).next().length>0){
-					$(back_elem).next().fadeIn(1000);
-					$("#panel-content").find('#'+back_elem.attr('id')).next().fadeIn(1000);
+		//for scrolling downwards
+		if(position<$("#panel-content").scrollTop()){
+			position = $("#panel-content").scrollTop();
+			if(position >= cum_panelheight - frame_height){
+				//scroll to next section, update counters
+				if($(current_panel).next().length>0){
+					$('#panel-content').animate({ scrollTop: cum_panelheight-5 }, 1000);
+					current_panel = $(current_panel).next();
+					cum_panelheight += $(current_panel).outerHeight();
+					//alert('now the active panel is: '+$(current_panel).attr('id'));
 				}
-				else if($(back_elem).parent().next().length>0){
-					//new topic
-					back_elem = $(back_elem).parent().next().find('img:first-child');
-					$(back_elem).fadeIn(1000);
-					$("#panel-content").find('#'+back_elem.attr('id')).fadeIn(1000);
+				else {//load next page
+					$(current_page).fadeOut(500);
+					if($(current_panel).next().length>0){
+						current_page = $(current_page).next();
+					}
+					else {
+						current_page = $("#panel-content").children('article:first');
+					}
+					$(current_page).fadeIn(1000);
+					//get first panel
+					current_panel = $(current_page).children('div:first');
+					cum_panelheight = $(current_panel).outerHeight();
+					$('#panel-content').animate({ scrollTop: 0 }, 1000);
 				}
-				else{//back to the beginning
-					$('.panel-background').find('img:first').fadeIn(1000);
-					$('#panel-content').find('div:first').fadeIn(1000);
-				}
+				//update position
+				position = $("#panel-content").scrollTop();
 			}
 		}
+
+
 	});
 
 });//end of document-ready code
