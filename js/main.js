@@ -42,6 +42,7 @@ $(document).ready(function() {
 			return false;
 		}
 	});
+	$('.panel-background').find('#'+$(current_panel).attr('id')).fadeIn(500);
 
 	//manual scroll for down/up arrow keys
   $(document).keydown(function(event) {
@@ -67,14 +68,15 @@ $(document).ready(function() {
 		if(position<$("#panel-content").scrollTop()){
 			position = $("#panel-content").scrollTop();
 			if(position >= cum_panelheight - frame_height){
-				//scroll to next section, update counters
+				$('.panel-background').find('img:visible').fadeOut(500);
+				//scroll to next, update counters, change background
 				if($(current_panel).next().length>0){
 					$('#panel-content').animate({ scrollTop: cum_panelheight-5 }, 1000);
 					current_panel = $(current_panel).next();
+					$('.panel-background').find('#'+$(current_panel).attr('id')).fadeIn(500);
 					cum_panelheight += $(current_panel).outerHeight();
-					//alert('now the active panel is: '+$(current_panel).attr('id'));
 				}
-				else {//load next page
+				else {//load next page, change background
 					$(current_page).fadeOut(500);
 					if($(current_panel).next().length>0){
 						current_page = $(current_page).next();
@@ -86,13 +88,13 @@ $(document).ready(function() {
 					//get first panel
 					current_panel = $(current_page).children('div:first');
 					cum_panelheight = $(current_panel).outerHeight();
+					$('.panel-background').find('#'+$(current_panel).attr('id')).fadeIn(500);
 					$('#panel-content').animate({ scrollTop: 0 }, 1000);
 				}
 				//update position
 				position = $("#panel-content").scrollTop();
 			}
 		}
-
 
 	});
 
