@@ -50,8 +50,7 @@ table {
 body {
 	font-size: 1.25vw;
 	text-align: center;
-	background-image: url('../images/bk1.jpg');
-	background-repeat: repeat;
+
 }
 header {
 	overflow: hidden;
@@ -92,6 +91,9 @@ h1 {
 	width: 100%;
 	display: none;
 }
+.panel-background #panel11 {
+	display: block;
+}
 
 #panel-content {
 	position: relative;
@@ -102,19 +104,28 @@ h1 {
 	height: 60vh;
 	/*border: .1vw dotted black;*/
 	overflow: auto;
-
+	text-align: left;
+}
+#panel-content article {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+#panel-content .homestay {
+	display: block;
 }
 #panel-content div {
 	position: relative;
-	top: 1vh;
-	display: none;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 1vw 0;
 }
 #panel-content img {
 	width: 100%;
 }
-#panel1, #panel-content #panel1 {
-	display: inline-block;
-}
+
 
 /*countdown page*/
 .landing, .mlanding, .mlanding2 {
