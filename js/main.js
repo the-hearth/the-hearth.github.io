@@ -103,7 +103,7 @@ $(document).ready(function() {
 		//for upwards scroll
 		else {
 			position = $("#panel-content").scrollTop();
-			if(position < cum_panelheight - $(current_panel).innerHeight() +5){
+			if(position < cum_panelheight - $(current_panel).innerHeight() +2){
 				//alert('this panel is scrolled up: '+ $(current_panel).attr('id'));
 				$('.panel-background').find('img:visible').fadeOut(500);
 				//scroll to previous, update counters, change background
@@ -111,7 +111,7 @@ $(document).ready(function() {
 					cum_panelheight -= $(current_panel).outerHeight();
 					current_panel = $(current_panel).prev();
 					$('.panel-background').find('#'+$(current_panel).attr('id')).fadeIn(500);
-					$('#panel-content').animate({ scrollTop: cum_panelheight - frame_height }, 1000);
+					$('#panel-content').animate({ scrollTop: cum_panelheight - frame_height +6}, 1000);
 					//alert('current panel is now: '+ $(current_panel).attr('id'));
 				}
 				//load previous page, change background, do nothing if it's the top of the first page
