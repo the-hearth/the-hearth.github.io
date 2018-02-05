@@ -1,5 +1,17 @@
+//function for parsing url for parameters (taken from http://jennamolby.com/how-to-display-dynamic-content-on-a-page-using-url-parameters/)
+function getParameterByName(name, url) {
+	if (!url) url = window.location.href;
+	name = name.replace(/[\[\]]/g, "\\$&");
+	var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+			results = regex.exec(url);
+	if (!results) return null;
+	if (!results[2]) return '';
+	return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+//function for temp countdown
 function makeTimer() {
-	var endTime = new Date("February 5, 2018 18:00:00 PDT");
+	var endTime = new Date("February 8, 2018 18:00:00 PDT");
 	var endTime = (Date.parse(endTime)) / 1000;
 
 	var now = new Date();
@@ -22,6 +34,14 @@ function makeTimer() {
 	$("#seconds").html(seconds + "<span>Seconds</span>");
 }
 
+//decide content of home-page based on url
+var dynamic_content = getParameterByName('dc');
+
+//load content after images have loaded
+window.onload = function() {
+  $("#panel-content").css('visibility','visible');
+};
+
 //enabling js after page loads
 $(document).ready(function() {
 
@@ -31,28 +51,34 @@ $(document).ready(function() {
 	//initializing counters for scroll operations
 	var scrollanim = false;
 	var position = $("#panel-content").scrollTop();
-	var current_page = $('#panel-content').find('article:visible');
+	var current_page = $('#panel-content').find('article:first');
+	var current_panel = $(current_page).find('div:first');
+	if(dynamic_content != null) {
+		current_panel = $('#panel-content').find('#'+dynamic_content);
+		current_page = $(current_panel).parent();
+	}
+	//load page
+	$(current_page).css('display','block');
 	var frame_height = $("#panel-content").innerHeight();
+	//get total height
 	var cum_panelheight = 0;
-	var current_panel;
 	$(current_page).children('div').each(function(index,element){
 		cum_panelheight += $(element).outerHeight();
-		if(position<cum_panelheight){
-			current_panel=$(element);
-			//check after making urls //alert('current panel number is: '+$(current_panel).attr('id'));
+		if($(element).attr('id')==$(current_panel).attr('id')){
 			return false;
 		}
-	});
+	});//alert($(current_page).attr('class')+', '+$(current_panel).attr('id')+', '+cum_panelheight);
+	//scroll to place
+	scrollanim = true;
+	$('#panel-content').animate({ scrollTop: cum_panelheight - $(current_panel).outerHeight() + 6 }, 1000);
+	setTimeout(function(){ scrollanim = false; }, 1100);
+	position = $("#panel-content").scrollTop();
+	//load background
 	$('.panel-background').find('#'+$(current_panel).attr('id')).fadeIn(500);
-	//initial positioning
-	$('#panel-content').animate({ scrollTop: 10 }, 1000);
-
 	//autofocus on panel
 	$('#panel-content').focus();
 
-//loop in chrome!!! what to do???
-
-	//listen for scroll reaching bottom of a panel/page
+	//listen for scroll reaching between panels
 	$('#panel-content').on('scroll', function() {
 		//for downwards scroll
 		if(position<$("#panel-content").scrollTop()){
@@ -68,6 +94,8 @@ $(document).ready(function() {
 				$('#panel-content').animate({ scrollTop: cum_panelheight - $(current_panel).outerHeight() + 6 }, 1000);
 				setTimeout(function(){ scrollanim = false; }, 1100);
 				position = $("#panel-content").scrollTop();
+				//update url
+				window.history.pushState('','','?dc='+$(current_panel).attr('id'));//update url
 			}
 		}
 		//for upwards scroll
@@ -77,13 +105,15 @@ $(document).ready(function() {
 				//update counters, change background
 				$('.panel-background').find('img:visible').fadeOut(500);
 				cum_panelheight -= $(current_panel).outerHeight();
-				current_panel = $(current_panel).prev();				
+				current_panel = $(current_panel).prev();
 				$('.panel-background').find('#'+$(current_panel).attr('id')).fadeIn(500);
 				//animate scroll to previous
 				scrollanim = true;
 				$('#panel-content').animate({ scrollTop: cum_panelheight - frame_height +6}, 1000);
 				setTimeout(function(){ scrollanim = false; }, 1100);
 				position = $("#panel-content").scrollTop();
+				//update url
+				window.history.pushState('','','?dc='+$(current_panel).attr('id'));//update url
 			}
 		}
 	});
@@ -110,12 +140,18 @@ $(document).ready(function() {
 					current_page = $("#panel-content").children('article:first');
 				}
 			}
-			//common
+			//load page and scroll
 			$(current_page).fadeIn(1000);
+			scrollanim = true;
 			$('#panel-content').animate({ scrollTop: 6 }, 1000);
-			//get first panel (change to 'same' panel?)
+			setTimeout(function(){ scrollanim = false; }, 1100);
+			position = $("#panel-content").scrollTop();
+			//get first panel for now (change to 'same' panel???)
 			current_panel = $(current_page).children('div:first');
+			//update url and load background
+			window.history.pushState('','','?dc='+$(current_panel).attr('id'));//update url
 			$('.panel-background').find('#'+$(current_panel).attr('id')).fadeIn(500)
+			//reset height
 			cum_panelheight = $(current_panel).outerHeight();
 		}
 	});
