@@ -50,14 +50,10 @@ table {
 body {
 	font-size: 1.25vw;
 	text-align: center;
-}
-header {
-	overflow: hidden;
-	background-color: rgba(0, 0, 0, 0.8);
-	color: white;
-	width: 100vw;
+	background-image: url('../images/background-paper.jpg');
 }
 h1 {
+	font-family: 'Roboto Condensed';
 	font-size: 1.5vw;
 	padding: 1vw;
 	text-align: left;
@@ -66,15 +62,35 @@ h1 {
 @media only screen and (max-aspect-ratio:1/1){
 	body {font-size: 3vw;}
 }
-
+/*header and fonts*/
+header {
+	position: fixed;
+	z-index: 4;
+	top: -2vw;
+	left: 0;
+	width: 100vw;
+}
+header .logo {
+	width: 100%;
+}
+#panel-content h1 {
+	font-family: 'Roboto Condensed';
+	font-size: 3vw;
+	padding: 0;
+}
+#panel-content p {
+	font-family: 'Roboto Condensed';
+	line-height: 2vw;
+	font-size: 1.5vw;
+}
 /*final home page*/
 #panel-container {
 	position: fixed;
-	top: 5vh;
-	left: 20vw;
-	width: 60vw;
-	height: 91.5vh;
-	overflow: hidden;
+	top: 0;
+	left: 5vw;
+	width: 90vw;
+	height: 50vw;
+	overflow: auto;
 	z-index: 3;
 }
 .panel-background {
@@ -92,16 +108,17 @@ h1 {
 	display: none;
 }
 #panel-content {
+	visibility: hidden;
 	position: relative;
-	top: 17.5vh;
-	left: 5vw;
+	top: 12vw;
+	left: 17vw;
 	z-index: 2;
-	width: 49.5vw;
-	height: 60vh;
+	width: 57vw;
+	height: 28vw;
 	overflow: auto;
 	outline: 0;
 	text-align: left;
-	/*how to hide scroll bar??*/	
+	/*how to hide scroll bar??*/
 }
 #panel-content article {
 	position: absolute;
@@ -110,18 +127,16 @@ h1 {
 	width: 100%;
 	display: none;
 }
-#panel-content .homestay {
-	display: block;
-}
 #panel-content div {
 	position: relative;
 	top: 0;
 	left: 0;
 	width: 100%;
-	padding: 1vw 0;
+	padding: 2vw 0;
 }
 #panel-content img {
 	width: 100%;
+	padding: 2vw 0;
 }
 
 
@@ -145,7 +160,6 @@ h1 {
 	.landing {display: none;}
 	.mlanding {display: block;}
 }
-
 footer {
 	position: fixed;
 	bottom: 0;
@@ -159,15 +173,20 @@ footer {
 footer p {
 	padding: 1em;
 }
-
 /*timer countdown*/
-header div {
+.header {
+	overflow: hidden;
+	background-color: rgba(0, 0, 0, 0.8);
+	color: white;
+	width: 100vw;
+}
+.header div {
   display: inline-block;
   line-height: 1;
   padding: 0.8vw 0.4vw;
   font-size: 3vw;
 }
-header span {
+.header span {
   display: inline-block;
 	padding: 0 0.4vw;
   font-size: 1.3vw;
@@ -183,11 +202,11 @@ header span {
 }
 /*mobile screen*/
 @media only screen and (max-aspect-ratio:1/1){
-	header div {
+	.header div {
 		padding: 1.5vw 9vw;
 		font-size: 6vw;
 	}
-	header span {
+	.header span {
 		padding: 0 0.6vw;
 	  font-size: 2vw;
 	}
