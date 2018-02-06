@@ -152,14 +152,21 @@ header .logo {
 	width: 3vw;
 	height: 40vw;
 	top: 3vw;
-	left: 78vw;	
+	left: 7vw;
 	z-index: 5;
+	/*border: .1vw solid black;*/
+}
+.right-tabs {
+	top: 12vw;
+	left: 78vw;
+	height: 30vw;
 }
 .side-tabs ul li {
 	margin: 1vw 0;
 	padding: 4vw 0;
 	z-index: 5;
 	cursor: pointer; /* to make the hand cursor appear*/
+	/*border: .1vw solid red;*/
 }
 .side-tabs ul li:first-child {
 	margin-top: 2vw;
