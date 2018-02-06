@@ -1,4 +1,4 @@
-//function for resetting activity of panel tabs based on an index
+//function for resetting activity of tob-bottom tabs based on an index
 function switchtabs(ind) {
 	$('.top-bottom-tabs').find('li').css('cursor','pointer');
 	$('.top-tabs').find('li').each(function(index,element){
@@ -6,6 +6,17 @@ function switchtabs(ind) {
 	});
 	$('.bottom-tabs').find('li').each(function(index,element){
 		if(index<ind){$(element).css('cursor','default');}
+	});
+}
+
+//function for resetting activity of side tabs based on an index
+function switchsidetabs(indx) {
+	$('.side-tabs').find('li').css('cursor','pointer');
+	$('.left-tabs').find('li').each(function(index,element){
+		if(index>=indx){$(element).css('cursor','default');}
+	});
+	$('.right-tabs').find('li').each(function(index,element){
+		if(index+1<indx){$(element).css('cursor','default');}
 	});
 }
 
@@ -95,6 +106,9 @@ $(document).ready(function() {
 	//activate relevant top-bottom-tabs
 	var ind = $(current_page).children('div').index(current_panel);
 	switchtabs(ind);
+	//reset relevant side tabs
+	var indx = $('#panel-content').children('article').index(current_page);
+	switchsidetabs(indx);
 
 	//listen for scroll reaching between panels
 	$('#panel-content').on('scroll', function() {
@@ -235,6 +249,9 @@ $(document).ready(function() {
 		//activate relevant top-bottom-tabs
 		ind = $(current_page).children('div').index(current_panel);
 		switchtabs(ind);
+		//reset relevant side tabs
+		indx = $('#panel-content').children('article').index(current_page);
+		switchsidetabs(indx);
 	});
 
 });//end of document-ready code
