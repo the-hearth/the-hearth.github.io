@@ -71,6 +71,10 @@ $(document).ready(function() {
 	//load page
 	$(current_page).css('display','block');
 	var frame_height = $("#panel-content").innerHeight();
+	//refresh frame height on resize
+	$( window ).resize(function() {
+  	frame_height = $("#panel-content").innerHeight();
+	});
 	//get total height
 	var cum_panelheight = 0;
 	$(current_page).children('div').each(function(index,element){
@@ -204,6 +208,30 @@ $(document).ready(function() {
 		window.history.pushState('','','?dc='+$(current_panel).attr('id'));
 		$('.panel-background').find('img:visible').fadeOut(500);
 		$('.panel-background').find('#'+$(current_panel).attr('id')).fadeIn(500)
+		//activate relevant top-bottom-tabs
+		ind = $(current_page).children('div').index(current_panel);
+		switchtabs(ind);
+	});
+
+	//listen for click on side tabs
+	$('.side-tabs').on('mousedown', 'li', function(event) {
+		event.preventDefault();
+		$('.panel-background').find('img:visible').fadeOut(500);
+		$(current_page).fadeOut(500);
+		current_page = $('#panel-content').find('.'+$(this).attr('class'));
+		//load page and scroll
+		$(current_page).fadeIn(1000);
+		scrollanim = true;
+		$('#panel-content').animate({ scrollTop: 6 }, 1000);
+		setTimeout(function(){ scrollanim = false; }, 1100);
+		position = $("#panel-content").scrollTop();
+		//get first panel for now (change to 'same' panel???)
+		current_panel = $(current_page).children('div:first');
+		//update url and load background
+		window.history.pushState('','','?dc='+$(current_panel).attr('id'));//update url
+		$('.panel-background').find('#'+$(current_panel).attr('id')).fadeIn(500)
+		//reset height
+		cum_panelheight = $(current_panel).outerHeight();
 		//activate relevant top-bottom-tabs
 		ind = $(current_page).children('div').index(current_panel);
 		switchtabs(ind);
