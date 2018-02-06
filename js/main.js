@@ -1,3 +1,14 @@
+//function for resetting activity of panel tabs based on an index
+function switchtabs(ind) {
+	$('.top-bottom-tabs').find('li').css('cursor','pointer');
+	$('.top-tabs').find('li').each(function(index,element){
+		if(index>ind){$(element).css('cursor','default');}
+	});
+	$('.bottom-tabs').find('li').each(function(index,element){
+		if(index<ind){$(element).css('cursor','default');}
+	});
+}
+
 //function for parsing url for parameters (taken from http://jennamolby.com/how-to-display-dynamic-content-on-a-page-using-url-parameters/)
 function getParameterByName(name, url) {
 	if (!url) url = window.location.href;
@@ -77,6 +88,9 @@ $(document).ready(function() {
 	$('.panel-background').find('#'+$(current_panel).attr('id')).fadeIn(500);
 	//autofocus on panel
 	$('#panel-content').focus();
+	//activate relevant top-bottom-tabs
+	var ind = $(current_page).children('div').index(current_panel);
+	switchtabs(ind);
 
 	//listen for scroll reaching between panels
 	$('#panel-content').on('scroll', function() {
@@ -95,7 +109,10 @@ $(document).ready(function() {
 				setTimeout(function(){ scrollanim = false; }, 1100);
 				position = $("#panel-content").scrollTop();
 				//update url
-				window.history.pushState('','','?dc='+$(current_panel).attr('id'));//update url
+				window.history.pushState('','','?dc='+$(current_panel).attr('id'));
+				//activate relevant top-bottom-tabs
+				ind = $(current_page).children('div').index(current_panel);
+				switchtabs(ind);
 			}
 		}
 		//for upwards scroll
@@ -114,6 +131,9 @@ $(document).ready(function() {
 				position = $("#panel-content").scrollTop();
 				//update url
 				window.history.pushState('','','?dc='+$(current_panel).attr('id'));//update url
+				//activate relevant top-bottom-tabs
+				ind = $(current_page).children('div').index(current_panel);
+				switchtabs(ind);
 			}
 		}
 	});
@@ -153,7 +173,40 @@ $(document).ready(function() {
 			$('.panel-background').find('#'+$(current_panel).attr('id')).fadeIn(500)
 			//reset height
 			cum_panelheight = $(current_panel).outerHeight();
+			//activate relevant top-bottom-tabs
+			ind = $(current_page).children('div').index(current_panel);
+			switchtabs(ind);
 		}
+	});
+
+	//listen for click on top-bottom tabs
+	$('.top-bottom-tabs').on('mousedown', 'li', function(event) {
+		event.preventDefault();
+		//update current panel
+		if($(current_page).attr('class')=='travels')
+		{current_panel = $('#panel-content').find('#'+$(current_page).attr('class')+'_'+$(this).attr('class').split(" ")[1]);}
+		else
+		{current_panel = $('#panel-content').find('#'+$(current_page).attr('class')+'_'+$(this).attr('class').split(" ")[0]);}
+		//calculate cum panel height
+		cum_panelheight = 0;
+		$(current_page).children('div').each(function(index,element){
+			cum_panelheight += $(element).outerHeight();
+			if($(element).attr('id')==$(current_panel).attr('id')){
+				return false;
+			}
+		});
+		//animate scroll to new panel
+		scrollanim = true;
+		$('#panel-content').animate({ scrollTop: cum_panelheight - $(current_panel).outerHeight() +6}, 1000);
+		setTimeout(function(){ scrollanim = false; }, 1100);
+		position = $("#panel-content").scrollTop();
+		//update url and reload background
+		window.history.pushState('','','?dc='+$(current_panel).attr('id'));
+		$('.panel-background').find('img:visible').fadeOut(500);
+		$('.panel-background').find('#'+$(current_panel).attr('id')).fadeIn(500)
+		//activate relevant top-bottom-tabs
+		ind = $(current_page).children('div').index(current_panel);
+		switchtabs(ind);
 	});
 
 });//end of document-ready code
