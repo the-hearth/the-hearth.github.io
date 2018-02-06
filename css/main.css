@@ -66,7 +66,7 @@ h1 {
 header {
 	position: fixed;
 	z-index: 4;
-	top: -2vw;
+	top: -3vh;
 	left: 0;
 	width: 100vw;
 }
@@ -86,18 +86,46 @@ header .logo {
 /*final home page*/
 #panel-container {
 	position: fixed;
-	top: 0;
+	bottom: 1vh; /*do it from the bottom later???*/
 	left: 5vw;
 	width: 90vw;
-	height: 50vw;
-	overflow: auto;
-	z-index: 3;
+	height: 90vh;
+	overflow: hidden;
+	/*border: .1vw solid black;*/
+	z-index: 5;
+}
+.top-bottom-tabs {
+	position: absolute;
+	display: inline-block;
+	width: 68vw;
+	height: 3vw;
+	top: 3.5vw;
+	left: 8vw;
+	z-index: 5;
+}
+.bottom-tabs {
+	top: 41vw;
+	left: 14vw;
+}
+.top-bottom-tabs ul li {
+	display: inline;
+	margin: 0 1vw;
+	padding: 0 4.5vw 1vw;
+	/*border: .1vw solid red;*/
+	z-index: 5;
+	cursor: pointer; /* to make the hand cursor appear*/
+}
+.top-bottom-tabs ul li:first-child {
+	margin-left: 2.5vw;
+}
+.top-bottom-tabs ul li:last-child {
+	margin-right: 0;
 }
 .panel-background {
-	position: relative;
-	top: 0;
-	left: 0;
-	width: 100%;
+	position: absolute;
+	top: -5vw;
+	left: 6vw;
+	width: 76vw;
 	z-index: 1;
 }
 .panel-background img {
@@ -109,12 +137,12 @@ header .logo {
 }
 #panel-content {
 	visibility: hidden;
-	position: relative;
-	top: 12vw;
+	position: absolute;
+	top: 7vw;
 	left: 17vw;
 	z-index: 2;
 	width: 57vw;
-	height: 28vw;
+	height: 32vw;
 	overflow: auto;
 	outline: 0;
 	text-align: left;
