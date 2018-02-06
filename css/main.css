@@ -66,13 +66,40 @@ h1 {
 header {
 	position: fixed;
 	z-index: 4;
-	top: -3vh;
+	top: -2vh;
 	left: 0;
 	width: 100vw;
 }
 header .logo {
 	width: 100%;
 }
+.top-nav {
+	position: absolute;
+	display: inline-block;
+	width: 75vw;
+	height: 3vw;
+	top: 4vw;
+	left: 4vw;
+	z-index: 5;
+}
+.top-nav ul li {
+	display: inline;
+}
+.top-nav ul li a {
+	width: 100%; /*maximize clickable area?*/
+	height: 100%;
+	outline: 0;
+	transition: padding 0.5s;
+}
+.top-nav ul li a:focus, .top-nav ul li a:hover {
+	padding: 0 3vw;
+}
+.top-nav ul li a img {
+	width: 8vw;/*sets the size of the list elements*/
+	margin: 0 1.5vw;
+}
+
+/*final home page*/
 #panel-content h1 {
 	font-family: 'Roboto Condensed';
 	font-size: 3vw;
@@ -83,7 +110,6 @@ header .logo {
 	line-height: 2vw;
 	font-size: 1.5vw;
 }
-/*final home page*/
 #panel-container {
 	position: fixed;
 	bottom: 1vh; /*do it from the bottom later???*/
@@ -120,6 +146,23 @@ header .logo {
 }
 .top-bottom-tabs ul li:last-child {
 	margin-right: 0;
+}
+.side-tabs {
+	position: absolute;
+	width: 3vw;
+	height: 40vw;
+	top: 3vw;
+	left: 78vw;	
+	z-index: 5;
+}
+.side-tabs ul li {
+	margin: 1vw 0;
+	padding: 4vw 0;
+	z-index: 5;
+	cursor: pointer; /* to make the hand cursor appear*/
+}
+.side-tabs ul li:first-child {
+	margin-top: 2vw;
 }
 .panel-background {
 	position: absolute;
