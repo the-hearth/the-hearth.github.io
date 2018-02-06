@@ -1,0 +1,52 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  	<meta charset="utf-8">
+  	<title>{{ site.title }}</title>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+      <img class="logo" src='images/logo.png' alt="logo"></img>
+      <nav class="top-nav">
+        <ul>
+          <li><a href='#'><img src='images/about_us.png' alt='about us'></img></a></li>
+          <li><a href='#'><img src='images/blog.png' alt='blog'></img></a></li>
+          <li><a href='home.html'><img src='images/book_now.png' alt='book now'></img></a></li>
+          <li><a href='#'><img src='images/faq.png' alt='faq'></img></a></li>
+          <li><a href='#'><img src='images/contact_us.png' alt='contact'></img></a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="panel-container">
+      <div class="panel-background">
+        <img style="display:block;" id="book_now" src='images/panel_background.png' alt="book now background"></img>
+      </div>
+
+      <img class="panel-heading" src='images/book_now.png' alt='book now'></img>
+
+      <div id="panel-content" tabindex="1" style="visibility:visible;">
+        <article style="display:block;" class="book_now">
+          <p>Please call and confirm availabilty with a member of our team before making a payment.</br></br>
+            In case you can't get through leave your email-id with your preferred dates below and we'll get back to you within a day.<br></br>
+            Thank you.</br></br>
+            <a href="https://imjo.in/S4KVAg" rel="im-checkout" data-behaviour="remote" data-style="light" data-text="Checkout"></a>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- jquery-3 -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <!-- instamojo js -->
+    <script src="https://d2xwmjc4uy2hr5.cloudfront.net/im-embed/im-embed.min.js"></script>
+
+  </body>
+</html>
