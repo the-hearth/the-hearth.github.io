@@ -185,6 +185,12 @@ header .logo {
 	width: 100%;
 	display: none;
 }
+.panel-heading {
+	position: absolute;
+	width: 8vw;
+	top: 4vw;
+	left: 11vw;
+}
 #panel-content {
 	visibility: hidden;
 	position: absolute;
@@ -216,7 +222,13 @@ header .logo {
 	width: 100%;
 	padding: 2vw 0;
 }
+#panel-content p {
+	position: absolute;
+	top: 5vw;
+	left: 0;
+	width: 60%;
 
+}
 
 /*countdown page*/
 .landing, .mlanding, .mlanding2 {
