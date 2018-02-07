@@ -223,11 +223,16 @@ header .logo {
 	padding: 2vw 0;
 }
 #panel-content p {
-	position: absolute;
-	top: 5vw;
+	position: relative;
+	top: 2vw;
 	left: 0;
 	width: 60%;
-
+}
+#panel-content form {
+	position: relative;
+	top: 2vw;
+	left: 0;
+	width: 100%;
 }
 
 /*countdown page*/
