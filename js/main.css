@@ -1,0 +1,417 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* custom css starts here... */
+body {
+	font-family: 'Roboto Condensed';
+	font-size: 1.25vw;
+	text-align: center;
+	background-image: url('../images/background-paper.jpg');
+	display: none;
+}
+#landing-page {
+	position: fixed;
+	top: -5vw;
+	width: 100vw;
+	overflow: hidden;
+}
+#landing-page img {
+	width: 100%;
+}
+h1 {
+	font-family: 'Roboto Condensed';
+	font-size: 1.5vw;
+	padding: 1vw;
+	text-align: left;
+}
+/*mobile screen*/
+@media only screen and (max-aspect-ratio:1/1){
+	body {font-size: 3vw;}
+}
+/*header and fonts*/
+header {
+	position: fixed;
+	z-index: 4;
+	top: -2vh;
+	left: 0;
+	width: 100vw;
+}
+header .logo {
+	width: 100%;
+}
+.top-nav {
+	position: absolute;
+	display: inline-block;
+	width: 75vw;
+	height: 3vw;
+	top: 4vw;
+	left: 4vw;
+	z-index: 5;
+}
+.top-nav ul li {
+	display: inline;
+}
+.top-nav ul li a {
+	width: 100%; /*maximize clickable area?*/
+	height: 100%;
+	outline: 0;
+	transition: padding 0.5s;
+}
+.top-nav ul li a:focus, .top-nav ul li a:hover {
+	padding: 0 3vw;
+}
+.top-nav ul li a img {
+	width: 8vw;/*sets the size of the list elements*/
+	margin: 0 1.5vw;
+}
+
+/*final home page*/
+#panel-container {
+	position: fixed;
+	bottom: 1vh; /*do it from the bottom later???*/
+	left: 5vw;
+	width: 90vw;
+	height: 90vh;
+	overflow: hidden;
+	/*border: .1vw solid black;*/
+	z-index: 5;
+}
+.top-bottom-tabs {
+	position: absolute;
+	display: inline-block;
+	width: 68vw;
+	height: 3vw;
+	top: 3.5vw;
+	left: 8vw;
+	z-index: 5;
+}
+.bottom-tabs {
+	top: 41vw;
+	left: 14vw;
+}
+.top-bottom-tabs ul li {
+	display: inline;
+	margin: 0 1vw;
+	padding: 0 4.5vw 1vw;
+	/*border: .1vw solid red;*/
+	z-index: 5;
+	cursor: pointer; /* to make the hand cursor appear*/
+}
+.top-bottom-tabs ul li:first-child {
+	margin-left: 2.5vw;
+}
+.top-bottom-tabs ul li:last-child {
+	margin-right: 0;
+}
+.side-tabs {
+	position: absolute;
+	width: 3vw;
+	height: 40vw;
+	top: 3vw;
+	left: 7vw;
+	z-index: 5;
+	/*border: .1vw solid black;*/
+}
+.right-tabs {
+	top: 12vw;
+	left: 78vw;
+	height: 30vw;
+}
+.side-tabs ul li {
+	margin: 1vw 0;
+	padding: 4vw 0;
+	z-index: 5;
+	cursor: pointer; /* to make the hand cursor appear*/
+	/*border: .1vw solid red;*/
+}
+.side-tabs ul li:first-child {
+	margin-top: 2vw;
+}
+.panel-background {
+	position: absolute;
+	top: -5vw;
+	left: 6vw;
+	width: 76vw;
+	z-index: 1;
+}
+.panel-background img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: none;
+}
+.panel-heading {
+	position: absolute;
+	width: 8vw;
+	top: 4vw;
+	left: 11vw;
+}
+#panel-content {
+	position: absolute;
+	top: 7vw;
+	left: 12vw;
+	z-index: 2;
+	width: 65vw;
+	height: 32vw;
+	overflow-y: auto;
+	overflow-x: hidden;
+	outline: 0;
+	text-align: left;
+	/*how to hide scroll bar??*/
+}
+#panel-content article {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: none;
+}
+#panel-content div {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 2vw 0;
+}
+#homestay_edibles img {
+	position: relative;
+	width: 60%;
+}
+#homestay_deals .deal-container {
+	position: relative;
+	top: 3.5vw;
+	left: 1vw;
+	width: 36.5vw;
+	height: 20vw;
+	padding-right: 2vw;
+	margin-bottom: 6vw;
+	z-index: 6;
+	outline: 0;
+	/*border: .1vw solid black;*/
+	overflow: auto;
+}
+#homestay_deals .dealtxt {
+	width: 100%;
+}
+#homestay_deals .deal2, #homestay_deals .deal3 {
+	display: none;
+}
+#homestay_deals .label {
+	position: absolute;
+	left: 2vw;
+	cursor: pointer;
+	z-index: 7;
+}
+#homestay_deals .label1, #homestay_deals .label2, #homestay_deals .label4 {
+	top: 3vw;
+}
+#homestay_deals .label3, #homestay_deals .label5 {
+	top: 5.5vw;
+}
+#homestay_deals .label6 {
+	top: 8vw;
+}
+#homestay_deals .label7 {
+	bottom: 10vw;
+}
+#homestay_deals .label8, #homestay_deals .label9 {
+	bottom: 7.5vw;
+}
+#homestay_deals .label1:hover, #homestay_deals .label2:hover {
+	cursor: pointer;
+}
+#homestay_deals .dealimg {
+	position: absolute;
+	top: -10vw;
+	left: -6vw;
+	width: 110%;
+}
+#homestay_tariffs img {
+	position: relative;
+	width: 60%;
+	padding-top:
+}
+#homestay_tariffs .extend {
+	padding-bottom: 8vw;
+}
+#panel-content h1 {
+	font-size: 1.5vw;
+	padding: 0;
+}
+#panel-content h2 {
+	font-size: 1.2vw;
+}
+#panel-content p {
+	line-height: 1.5vw;
+	font-size: 1vw;
+	width: 60%;
+}
+#panel-content p em {
+	font-weight: 600;
+}
+#panel-content .italp {
+	font-style: italic;
+	line-height: 1.2vw;
+	font-size: 0.9vw;
+	padding-left: 1vw;
+}
+#panel-content .bigp {
+	position: relative;
+	top: 1vw;
+	left: 0;
+	width: 60%;
+}
+#homestay_activities p {
+	width: 80%;
+}
+#panel-content form {
+	position: relative;
+	top: 1vw;
+	left: 0;
+	width: 100%;
+}
+#panel-content form input {
+	margin: 0.5vw 0;
+}
+#panel-content form select option[data-default] {
+  color: #888;
+}
+#panel-content form #date-input {
+	width: 41.5%;
+}
+#panel-content form #num-input {
+	width: 17.5%;
+}
+#panel-content form textarea {
+	width: 62.5%;
+	margin: 1vw 0 0 0.2vw;
+}
+#panel-content form #submit {
+	margin-left: 0.2vw;
+}
+
+/*countdown page*/
+.landing, .mlanding, .mlanding2 {
+	position: relative;
+	top: 0;
+	width: 100vw;
+}
+.landing img, .mlanding img {
+	width: 100%;
+}
+.mlanding2 img {
+	width: 80%;
+}
+.mlanding {
+	display: none;
+}
+/*mobile screen*/
+@media only screen and (max-aspect-ratio:1/1){
+	.landing {display: none;}
+	.mlanding {display: block;}
+}
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	overflow: hidden;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.8);
+	color: #eb5854;
+	padding: 0.5em;
+}
+footer p {
+	padding: 1em;
+}
+/*timer countdown*/
+.header {
+	overflow: hidden;
+	background-color: rgba(0, 0, 0, 0.8);
+	color: white;
+	width: 100vw;
+}
+.header div {
+  display: inline-block;
+  line-height: 1;
+  padding: 0.8vw 0.4vw;
+  font-size: 3vw;
+}
+.header span {
+  display: inline-block;
+	padding: 0 0.4vw;
+  font-size: 1.3vw;
+  color: white;
+}
+#days {
+  font-size: 5vw;
+  color: #db4844;
+}
+#hours, #minutes, #seconds {
+  font-size: 3vw;
+  color: #db4844;
+}
+/*mobile screen*/
+@media only screen and (max-aspect-ratio:1/1){
+	.header div {
+		padding: 1.5vw 9vw;
+		font-size: 6vw;
+	}
+	.header span {
+		padding: 0 0.6vw;
+	  font-size: 2vw;
+	}
+	#days {
+		font-size: 6vw;
+		padding: 1.5vw 0.6vw;
+	}
+	#hours, #minutes, #seconds {
+		font-size: 6vw;
+		padding: 1.5vw 0.6vw;
+	}
+}
