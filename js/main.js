@@ -56,61 +56,73 @@ function makeTimer() {
 	$("#seconds").html(seconds + "<span>Seconds</span>");
 }
 
-//decide content of home-page based on url
-var dynamic_content = getParameterByName('dc');
+//global variables
+var dynamic_content = getParameterByName('dc');//decide content of home-page based on url
+var scrollanim = false;
+var position;
+var current_page;
+var current_panel;
+var frame_height;
+var cum_panelheight = 0;
+var ind;//for top and bottom tabs
+var indx;//for side tabs
 
-//load content after images have loaded
+//load content & make calculations after content loads
 window.onload = function() {
-  $("#panel-content").css('visibility','visible');
+
 };
 
-//enabling js after page loads
+//enabling js after page dom loads
 $(document).ready(function() {
 
-	//timer
+//general fade in for all pages
+	$('body').fadeIn(1000);
+
+//timer
 	setInterval(function() { makeTimer(); }, 1000);
 
-	//initializing counters for scroll operations
-	var scrollanim = false;
-	var position = $("#panel-content").scrollTop();
-	var current_page = $('#panel-content').find('article:first');
-	var current_panel = $(current_page).find('div:first');
+//initializing counters for scroll operations
+	position = $("#panel-content").scrollTop();
+	current_page = $('#panel-content').find('article:first');
+	current_panel = $(current_page).find('div:first');
 	if(dynamic_content != null) {
 		current_panel = $('#panel-content').find('#'+dynamic_content);
 		current_page = $(current_panel).parent();
 	}
-	//load page
-	$(current_page).css('display','block');
-	var frame_height = $("#panel-content").innerHeight();
-	//refresh frame height on resize
-	$( window ).resize(function() {
-  	frame_height = $("#panel-content").innerHeight();
-	});
-	//get total height
-	var cum_panelheight = 0;
-	$(current_page).children('div').each(function(index,element){
-		cum_panelheight += $(element).outerHeight();
-		if($(element).attr('id')==$(current_panel).attr('id')){
-			return false;
-		}
-	});//alert($(current_page).attr('class')+', '+$(current_panel).attr('id')+', '+cum_panelheight);
-	//scroll to place
-	scrollanim = true;
-	$('#panel-content').animate({ scrollTop: cum_panelheight - $(current_panel).outerHeight() + 6 }, 1000);
-	setTimeout(function(){ scrollanim = false; }, 1100);
-	position = $("#panel-content").scrollTop();
-	//load background
+	//load content & background
 	$('.panel-background').find('#'+$(current_panel).attr('id')).fadeIn(500);
-	//autofocus on panel
-	$('#panel-content').focus();
-	//activate relevant top-bottom-tabs
-	var ind = $(current_page).children('div').index(current_panel);
-	switchtabs(ind);
-	//reset relevant side tabs
-	var indx = $('#panel-content').children('article').index(current_page);
-	switchsidetabs(indx);
+	$(current_page).fadeIn(1000);
+	//give some time for content to load
+	setTimeout(function() {
+		//calculate heights
+		frame_height = $("#panel-content").innerHeight();
+		$(current_page).children('div').each(function(index,element){
+			cum_panelheight += $(element).outerHeight();
+			if($(element).attr('id')==$(current_panel).attr('id')){
+				return false;
+			}
+		});
+		//scroll to place
+		scrollanim = true;
+		$('#panel-content').animate({ scrollTop: cum_panelheight - $(current_panel).outerHeight() + 6 }, 1000);
+		setTimeout(function(){ scrollanim = false; }, 1100);
+		position = $("#panel-content").scrollTop();
+		//autofocus on panel
+		$('#panel-content').focus();
+		//activate relevant top-bottom-tabs
+		ind = $(current_page).children('div').index(current_panel);
+		switchtabs(ind);
+		//reset relevant side tabs
+		indx = $('#panel-content').children('article').index(current_page);
+		switchsidetabs(indx);
+	}, 1000);
 
-	//listen for scroll reaching between panels
+//refresh frame height on resize
+	$( window ).resize(function() {
+		frame_height = $("#panel-content").innerHeight();
+	});
+
+//listen for scroll reaching between panels
 	$('#panel-content').on('scroll', function() {
 		//for downwards scroll
 		if(position<$("#panel-content").scrollTop()){
@@ -252,6 +264,61 @@ $(document).ready(function() {
 		//reset relevant side tabs
 		indx = $('#panel-content').children('article').index(current_page);
 		switchsidetabs(indx);
+	});
+
+	//listen for form select
+	$(".service").change(function() {
+  	//alert($(this).val()+" option selected");
+		if($(this).val()=='homestay'){
+			var newOptions = {"Select Room": "Room Type", "Double Bed": "Double Bed", "Single Bed": "Single Bed", "Twin Bed": "Twin Bed"};
+			$(".room").empty();
+			$.each(newOptions, function(key,value) {
+  			$(".room").append($("<option></option>")
+     		.attr("value", value).text(key));
+	 		});
+		}
+		else if($(this).val()=='hostel'){
+			var newOptions = {"Select Room": "Room Type", "Men's Dorm": "Men's Dorm", "Women's Dorm": "Women's Dorm", "Coed Dorm": "Coed Dorm"};
+			$(".room").empty();
+			$.each(newOptions, function(key,value) {
+  			$(".room").append($("<option></option>")
+     		.attr("value", value).text(key));
+	 		});
+		}
+		if($(this).val()=='travel'){
+			var newOptions = {"Itineraries": "Itinerary Type", "Itinerary 1": "Itinerary 1", "Itinerary 2": "Itinerary 2", "Itinerary 3": "Itinerary 3"};
+			$(".room").empty();
+			$.each(newOptions, function(key,value) {
+  			$(".room").append($("<option></option>")
+     		.attr("value", value).text(key));
+	 		});
+		}
+	});
+
+	//listen for click inside deals panel
+	$('.dealtxt').on('mousedown', function(event) {
+		event.preventDefault();
+		$('.deal-container').focus();
+	});
+
+	//listen for click on labels in deals panel
+	$('.link').on('mousedown', function(event) {
+		event.preventDefault();
+		$('.label').fadeOut(1000);
+		$('.dealtxt').fadeOut(1000);
+		$('.dealimg').fadeOut(1000);
+		var active_index = $(this).attr('class').split(" ")[4].split("-")[1];
+		$('.deal'+active_index).fadeIn(1000);
+		if(active_index==2){
+			$('.deal-container').css('top','6vw');
+		}
+		else if(active_index==3){
+			$('.deal-container').css('top','8.5vw');
+		}
+		else {
+			$('.deal-container').css('top','3.5vw');
+		}
+
 	});
 
 });//end of document-ready code
