@@ -31,31 +31,6 @@ function getParameterByName(name, url) {
 	return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
-//function for temp countdown
-function makeTimer() {
-	var endTime = new Date("February 8, 2018 18:00:00 PDT");
-	var endTime = (Date.parse(endTime)) / 1000;
-
-	var now = new Date();
-	var now = (Date.parse(now) / 1000);
-
-	var timeLeft = endTime - now;
-
-	var days = Math.floor(timeLeft / 86400);
-	var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
-	var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600 )) / 60);
-	var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
-
-	if (hours < "10") { hours = "0" + hours; }
-	if (minutes < "10") { minutes = "0" + minutes; }
-	if (seconds < "10") { seconds = "0" + seconds; }
-
-	$("#days").html(days + "<span>Days</span>");
-	$("#hours").html(hours + "<span>Hours</span>");
-	$("#minutes").html(minutes + "<span>Minutes</span>");
-	$("#seconds").html(seconds + "<span>Seconds</span>");
-}
-
 //global variables
 var dynamic_content = getParameterByName('dc');//decide content of home-page based on url
 var scrollanim = false;
@@ -69,7 +44,6 @@ var indx;//for side tabs
 
 //load content & make calculations after content loads
 window.onload = function() {
-
 };
 
 //enabling js after page dom loads
@@ -77,9 +51,6 @@ $(document).ready(function() {
 
 //general fade in for all pages
 	$('body').fadeIn(1000);
-
-//timer
-	setInterval(function() { makeTimer(); }, 1000);
 
 //initializing counters for scroll operations
 	position = $("#panel-content").scrollTop();
@@ -309,16 +280,10 @@ $(document).ready(function() {
 		$('.dealimg').fadeOut(1000);
 		var active_index = $(this).attr('class').split(" ")[4].split("-")[1];
 		$('.deal'+active_index).fadeIn(1000);
-		if(active_index==2){
-			$('.deal-container').css('top','6vw');
-		}
-		else if(active_index==3){
-			$('.deal-container').css('top','8.5vw');
-		}
-		else {
-			$('.deal-container').css('top','3.5vw');
-		}
-
+		//adjust the panel container position
+		if(active_index==2){ $('.deal-container').css('top','6vw');	}
+		else if(active_index==3){ $('.deal-container').css('top','8.5vw'); }
+		else { $('.deal-container').css('top','3.5vw');	}
 	});
 
 });//end of document-ready code
