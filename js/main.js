@@ -49,11 +49,11 @@ window.onload = function() {
 //enabling js after page dom loads
 $(document).ready(function() {
 
-//general fade in for all pages
-	$('body').fadeIn(1000);
+//general fade in for header and sections of all pages
+	$("header").fadeTo(1500, 1.0);
+	$("section").fadeTo(3000, 1.0);
 
 //initializing counters for scroll operations
-	position = $("#panel-content").scrollTop();
 	current_page = $('#panel-content').find('article:first');
 	current_panel = $(current_page).find('div:first');
 	if(dynamic_content != null) {
@@ -62,8 +62,8 @@ $(document).ready(function() {
 	}
 	//load content & background
 	$('.panel-background').find('#'+$(current_panel).attr('id')).fadeIn(500);
-	$(current_page).fadeIn(1000);
-	//give some time for content to load
+	$(current_page).fadeIn(500);
+	//give 2 seconds for content to load fully
 	setTimeout(function() {
 		//calculate heights
 		frame_height = $("#panel-content").innerHeight();
@@ -86,7 +86,7 @@ $(document).ready(function() {
 		//reset relevant side tabs
 		indx = $('#panel-content').children('article').index(current_page);
 		switchsidetabs(indx);
-	}, 1000);
+	}, 2000);
 
 //refresh frame height on resize
 	$( window ).resize(function() {
