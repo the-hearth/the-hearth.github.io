@@ -52,7 +52,9 @@ body {
 	font-size: 1.25vw;
 	text-align: center;
 	background-image: url('../images/background-paper.jpg');
-	display: none;
+}
+section {
+	opacity: 0.0;
 }
 #landing-page {
 	position: fixed;
@@ -79,6 +81,7 @@ header {
 	top: -2vh;
 	left: 0;
 	width: 100vw;
+	opacity: 0.0;
 }
 header .logo {
 	width: 100%;
@@ -105,7 +108,7 @@ section #logo-link {/*extra one in section to complete the square*/
 	height: 3vw;
 	top: 4vw;
 	left: 4vw;
-	z-index: 5;
+	z-index: 5;	
 }
 .top-nav ul li {
 	display: inline;
