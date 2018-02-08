@@ -48,9 +48,20 @@ table {
 
 /* custom css starts here... */
 body {
+	font-family: 'Roboto Condensed';
 	font-size: 1.25vw;
 	text-align: center;
 	background-image: url('../images/background-paper.jpg');
+	display: none;
+}
+#landing-page {
+	position: fixed;
+	top: -5vw;
+	width: 100vw;
+	overflow: hidden;
+}
+#landing-page img {
+	width: 100%;
 }
 h1 {
 	font-family: 'Roboto Condensed';
@@ -100,16 +111,6 @@ header .logo {
 }
 
 /*final home page*/
-#panel-content h1 {
-	font-family: 'Roboto Condensed';
-	font-size: 3vw;
-	padding: 0;
-}
-#panel-content p {
-	font-family: 'Roboto Condensed';
-	line-height: 2vw;
-	font-size: 1.5vw;
-}
 #panel-container {
 	position: fixed;
 	bottom: 1vh; /*do it from the bottom later???*/
@@ -192,14 +193,14 @@ header .logo {
 	left: 11vw;
 }
 #panel-content {
-	visibility: hidden;
 	position: absolute;
 	top: 7vw;
-	left: 17vw;
+	left: 12vw;
 	z-index: 2;
-	width: 57vw;
+	width: 65vw;
 	height: 32vw;
-	overflow: auto;
+	overflow-y: auto;
+	overflow-x: hidden;
 	outline: 0;
 	text-align: left;
 	/*how to hide scroll bar??*/
@@ -218,21 +219,121 @@ header .logo {
 	width: 100%;
 	padding: 2vw 0;
 }
-#panel-content img {
+#homestay_edibles img {
+	position: relative;
+	width: 60%;
+}
+#homestay_deals .deal-container {
+	position: relative;
+	top: 3.5vw;
+	left: 1vw;
+	width: 36.5vw;
+	height: 20vw;
+	padding-right: 2vw;
+	margin-bottom: 6vw;
+	z-index: 6;
+	outline: 0;
+	/*border: .1vw solid black;*/
+	overflow: auto;
+}
+#homestay_deals .dealtxt {
 	width: 100%;
-	padding: 2vw 0;
+}
+#homestay_deals .deal2, #homestay_deals .deal3 {
+	display: none;
+}
+#homestay_deals .label {
+	position: absolute;
+	left: 2vw;
+	cursor: pointer;
+	z-index: 7;
+}
+#homestay_deals .label1, #homestay_deals .label2, #homestay_deals .label4 {
+	top: 3vw;
+}
+#homestay_deals .label3, #homestay_deals .label5 {
+	top: 5.5vw;
+}
+#homestay_deals .label6 {
+	top: 8vw;
+}
+#homestay_deals .label7 {
+	bottom: 10vw;
+}
+#homestay_deals .label8, #homestay_deals .label9 {
+	bottom: 7.5vw;
+}
+#homestay_deals .label1:hover, #homestay_deals .label2:hover {
+	cursor: pointer;
+}
+#homestay_deals .dealimg {
+	position: absolute;
+	top: -10vw;
+	left: -6vw;
+	width: 110%;
+}
+#homestay_tariffs img {
+	position: relative;
+	width: 60%;
+	padding-top:
+}
+#homestay_tariffs .extend {
+	padding-bottom: 8vw;
+}
+#panel-content h1 {
+	font-size: 1.5vw;
+	padding: 0;
+}
+#panel-content h2 {
+	font-size: 1.2vw;
 }
 #panel-content p {
+	line-height: 1.5vw;
+	font-size: 1vw;
+	width: 60%;
+}
+#panel-content p em {
+	font-weight: 600;
+}
+#panel-content .italp {
+	font-style: italic;
+	line-height: 1.2vw;
+	font-size: 0.9vw;
+	padding-left: 1vw;
+}
+#panel-content .bigp {
 	position: relative;
-	top: 2vw;
+	top: 1vw;
 	left: 0;
 	width: 60%;
 }
+#homestay_activities p {
+	width: 80%;
+}
 #panel-content form {
 	position: relative;
-	top: 2vw;
+	top: 1vw;
 	left: 0;
 	width: 100%;
+}
+#panel-content form input {
+	margin: 0.5vw 0;
+}
+#panel-content form select option[data-default] {
+  color: #888;
+}
+#panel-content form #date-input {
+	width: 41.5%;
+}
+#panel-content form #num-input {
+	width: 17.5%;
+}
+#panel-content form textarea {
+	width: 62.5%;
+	margin: 1vw 0 0 0.2vw;
+}
+#panel-content form #submit {
+	margin-left: 0.2vw;
 }
 
 /*countdown page*/
