@@ -34,27 +34,45 @@ layout: null
 
       <div id="panel-content" tabindex="1" style="visibility:visible;">
         <article style="display:block;" class="book_now">
-          <p>Please call and confirm availabilty with a member of our team before making a payment.</br>
+
+          <p class="bigp">Please call and confirm availabilty with a member of our team before making a payment.</br>
             <a href="https://www.instamojo.com/@thehearth/lbdb3d7bdfe654ca580be32504d04fb01/" rel="im-checkout" data-behaviour="remote" data-style="light" data-text="Make Payment"></a>
-            In case you can't get through leave your email-id with your preferred dates below and we'll get back to you within a day.
+            In case you can't get through leave your email-id with your preferences below and we'll get back to you within a day.
             Thank you.</br><br>
           </p>
 
           <form action="https://formspree.io/nishant.sth@gmail.com" method="POST">
-            <input type="text" name="name" placeholder="Your name">
-            <input type="email" name="email" placeholder="Your email">
-            <input type="hidden" name="_next" value="http://thehearth.in/home.html" />
-            <input type="submit" value="Send">
+            <input type="text" name="name" placeholder="Your Name">
+            <input type="email" name="email" placeholder="Your Email">
+            <select class="service" name="service">
+              <option value="" selected data-default>Select Service</option>
+              <option value="homestay">Homestay</option>
+              <option value="hostel">Hostel</option>
+              <option value="travel">Travels</option>
+            </select>
+            <input id="date-input" type="text" name="dates" placeholder="Preferred Dates (Example: 28-May to 7-June)">
+            <input id="num-input" type="text" name="people" placeholder="Number of People">
+            <select class='room' name="room">
+              <option value="" selected data-default>Select Type</option>
+              <option value="homestay">homestay</option>
+              <option value="hostel">hostel</option>
+              <option value="travel">travel</option>
+            </select>
+            <textarea name="message" placeholder="A little bit about yourself"></textarea>
+            <input type="hidden" name="_next" value="http://thehearth.in/home.html">
+            </br><input id="submit" type="submit" value="Send">
           </form>
+
         </article>
       </div>
-
     </section>
 
     <!-- jquery-3 -->
     <script src="js/jquery-3.1.1.min.js"></script>
     <!-- instamojo js -->
     <script src="https://d2xwmjc4uy2hr5.cloudfront.net/im-embed/im-embed.min.js"></script>
+    <!-- custom js -->
+    <script src="js/main.js"></script>
 
   </body>
 </html>
