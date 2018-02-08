@@ -76,13 +76,27 @@ h1 {
 /*header and fonts*/
 header {
 	position: fixed;
-	z-index: 4;
 	top: -2vh;
 	left: 0;
 	width: 100vw;
 }
 header .logo {
 	width: 100%;
+	z-index: 4;
+}
+#logo-link {
+	position: absolute;
+	top: 1.5vw;
+	right: 5vw;
+	width: 8vw;
+	height: 8vw;
+	z-index: 6;
+	outline: 0;
+	/*border: .1vw solid red;*/
+}
+section #logo-link {/*extra one in section to complete the square*/
+	top: -4vw;
+	right: 0;
 }
 .top-nav {
 	position: absolute;
@@ -221,7 +235,7 @@ header .logo {
 }
 #homestay_edibles img {
 	position: relative;
-	width: 60%;
+	width: 100%;
 }
 #homestay_deals .deal-container {
 	position: relative;
@@ -278,7 +292,7 @@ header .logo {
 	padding-top:
 }
 #homestay_tariffs .extend {
-	padding-bottom: 8vw;
+	padding-bottom: 12vw;
 }
 #panel-content h1 {
 	font-size: 1.5vw;
