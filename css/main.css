@@ -108,7 +108,7 @@ section #logo-link {/*extra one in section to complete the square*/
 	height: 3vw;
 	top: 4vw;
 	left: 4vw;
-	z-index: 5;	
+	z-index: 5;
 }
 .top-nav ul li {
 	display: inline;
@@ -236,11 +236,12 @@ section #logo-link {/*extra one in section to complete the square*/
 	width: 100%;
 	padding: 2vw 0;
 }
-#homestay_edibles img {
+#homestay_edibles img, #hostel_edibles img {
 	position: relative;
 	width: 100%;
 }
-#homestay_deals .deal-container {
+/*deals section - don't get intimidated*/
+#homestay_deals .deal-container, #hostel_deals .deal-container {
 	position: relative;
 	top: 3.5vw;
 	left: 1vw;
@@ -251,48 +252,69 @@ section #logo-link {/*extra one in section to complete the square*/
 	z-index: 6;
 	outline: 0;
 	/*border: .1vw solid black;*/
+
 	overflow: auto;
 }
-#homestay_deals .dealtxt {
+#hostel_deals .deal-container {
+	width: 35vw;
+	height: 10vw;
+}
+#homestay_deals .dealtxt, #hostel_deals .dealtxt {
 	width: 100%;
 }
-#homestay_deals .deal2, #homestay_deals .deal3 {
+#hostel_deals .right-align {
+	width: 95%;
+	text-align-last: right;
+}
+#homestay_deals .deal2, #homestay_deals .deal3, #hostel_deals .deal2, #hostel_deals .deal3, #hostel_deals .deal4 {
 	display: none;
 }
-#homestay_deals .label {
+#homestay_deals .label, #hostel_deals .label {
 	position: absolute;
 	left: 2vw;
 	cursor: pointer;
 	z-index: 7;
 }
-#homestay_deals .label1, #homestay_deals .label2, #homestay_deals .label4 {
-	top: 3vw;
+#hostel_deals .label {
+	padding-bottom: 1vw;
 }
-#homestay_deals .label3, #homestay_deals .label5 {
-	top: 5.5vw;
+#homestay_deals .label1, #homestay_deals .label2, #homestay_deals .label4,
+	#hostel_deals .label1, #hostel_deals .label2, #hostel_deals .label4, #hostel_deals .label7 {
+		top: 3vw;
 }
-#homestay_deals .label6 {
+#homestay_deals .label3, #homestay_deals .label5,
+	#hostel_deals .label3, #hostel_deals .label5, #hostel_deals .label8 {
+		top: 5.5vw;
+}
+#homestay_deals .label6, #hostel_deals .label6, #hostel_deals .label9 {
 	top: 8vw;
 }
-#homestay_deals .label7 {
+#hostel_deals .label10 {
+	top: 11vw;
+}
+#homestay_deals .label7, #hostel_deals .label11 {
 	bottom: 10vw;
 }
-#homestay_deals .label8, #homestay_deals .label9 {
+#homestay_deals .label8, #homestay_deals .label9, #hostel_deals .label12, #hostel_deals .label14 {
 	bottom: 7.5vw;
 }
-#homestay_deals .label1:hover, #homestay_deals .label2:hover {
+#hostel_deals .label13, #hostel_deals .label15, #hostel_deals .label16 {
+	bottom: 5vw;
+}
+.label:hover {
 	cursor: pointer;
 }
-#homestay_deals .dealimg {
+#homestay_deals .dealimg, #hostel_deals .dealimg {
 	position: absolute;
 	top: -10vw;
 	left: -6vw;
 	width: 110%;
 }
-#homestay_tariffs img {
+/*deals section over, phew...*/
+
+#homestay_tariffs img, #hostel_tariffs img {
 	position: relative;
 	width: 60%;
-	padding-top:
 }
 #homestay_tariffs .extend {
 	padding-bottom: 12vw;
@@ -318,11 +340,8 @@ section #logo-link {/*extra one in section to complete the square*/
 	font-size: 0.9vw;
 	padding-left: 1vw;
 }
-#panel-content .bigp {
-	position: relative;
-	top: 1vw;
-	left: 0;
-	width: 60%;
+#panel-content .bigital {
+	font-size: 1vw;	
 }
 #homestay_activities p {
 	width: 80%;
