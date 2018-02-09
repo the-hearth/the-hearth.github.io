@@ -44,14 +44,19 @@ var indx;//for side tabs
 
 //load content & make calculations after content loads
 window.onload = function() {
+	//general fade in for header and sections of all pages
+		$("header").fadeTo(1500, 1.0);
+		$("section").fadeTo(3000, 1.0);
 };
 
 //enabling js after page dom loads
 $(document).ready(function() {
 
-//general fade in for header and sections of all pages
-	$("header").fadeTo(1500, 1.0);
-	$("section").fadeTo(3000, 1.0);
+//In case window.onload doesn't fire
+	setTimeout(function() {
+		$("header").fadeTo(1500, 1.0);
+		$("section").fadeTo(3000, 1.0);
+	}, 8000);
 
 //initializing counters for scroll operations
 	current_page = $('#panel-content').find('article:first');
