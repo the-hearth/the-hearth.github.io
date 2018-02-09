@@ -52,12 +52,6 @@ window.onload = function() {
 //enabling js after page dom loads
 $(document).ready(function() {
 
-//In case window.onload doesn't fire
-	setTimeout(function() {
-		$("header").fadeTo(1500, 1.0);
-		$("section").fadeTo(3000, 1.0);
-	}, 8000);
-
 //initializing counters for scroll operations
 	current_page = $('#panel-content').find('article:first');
 	current_panel = $(current_page).find('div:first');
