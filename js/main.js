@@ -75,8 +75,10 @@ $(document).ready(function() {
 		});
 		//scroll to place
 		scrollanim = true;
-		$('#panel-content').animate({ scrollTop: cum_panelheight - $(current_panel).outerHeight() + 6 }, 1000);
-		setTimeout(function(){ scrollanim = false; }, 1100);
+		$('#panel-content').animate(
+			{ scrollTop: cum_panelheight - $(current_panel).outerHeight() + 6 },
+			2000, function(){ scrollanim = false; }
+		);
 		position = $("#panel-content").scrollTop();
 		//autofocus on panel
 		$('#panel-content').focus();
@@ -106,8 +108,10 @@ $(document).ready(function() {
 				cum_panelheight += $(current_panel).outerHeight();
 				//animate scroll to next
 				scrollanim = true;
-				$('#panel-content').animate({ scrollTop: cum_panelheight - $(current_panel).outerHeight() + 6 }, 1000);
-				setTimeout(function(){ scrollanim = false; }, 1100);
+				$('#panel-content').animate({ scrollTop: cum_panelheight - $(current_panel).outerHeight() + 6 },
+					1000, function(){ scrollanim = false; }
+				);
+				//setTimeout(function(){ scrollanim = false; }, 1100);
 				position = $("#panel-content").scrollTop();
 				//update url
 				window.history.pushState('','','?dc='+$(current_panel).attr('id'));
@@ -127,8 +131,11 @@ $(document).ready(function() {
 				$('.panel-background').find('#'+$(current_panel).attr('id')).fadeIn(500);
 				//animate scroll to previous
 				scrollanim = true;
-				$('#panel-content').animate({ scrollTop: cum_panelheight - frame_height +6}, 1000);
-				setTimeout(function(){ scrollanim = false; }, 1100);
+
+				$('#panel-content').animate(
+					{ scrollTop: cum_panelheight - frame_height +6},
+					1000, function(){ scrollanim = false; }
+				);
 				position = $("#panel-content").scrollTop();
 				//update url
 				window.history.pushState('','','?dc='+$(current_panel).attr('id'));//update url
@@ -164,8 +171,9 @@ $(document).ready(function() {
 			//load page and scroll
 			$(current_page).fadeIn(1000);
 			scrollanim = true;
-			$('#panel-content').animate({ scrollTop: 6 }, 1000);
-			setTimeout(function(){ scrollanim = false; }, 1100);
+			$('#panel-content').animate({ scrollTop: 6 },
+				1000, function(){ scrollanim = false; }
+			);
 			position = $("#panel-content").scrollTop();
 			//get first panel for now (change to 'same' panel???)
 			current_panel = $(current_page).children('div:first');
@@ -198,8 +206,9 @@ $(document).ready(function() {
 		});
 		//animate scroll to new panel
 		scrollanim = true;
-		$('#panel-content').animate({ scrollTop: cum_panelheight - $(current_panel).outerHeight() +6}, 1000);
-		setTimeout(function(){ scrollanim = false; }, 1100);
+		$('#panel-content').animate({ scrollTop: cum_panelheight - $(current_panel).outerHeight() +6},
+			2000, function(){ scrollanim = false; }
+		);
 		position = $("#panel-content").scrollTop();
 		//update url and reload background
 		window.history.pushState('','','?dc='+$(current_panel).attr('id'));
@@ -219,8 +228,9 @@ $(document).ready(function() {
 		//load page and scroll
 		$(current_page).fadeIn(1000);
 		scrollanim = true;
-		$('#panel-content').animate({ scrollTop: 6 }, 1000);
-		setTimeout(function(){ scrollanim = false; }, 1100);
+		$('#panel-content').animate({ scrollTop: 6 },
+			2000, function(){ scrollanim = false; }
+		);
 		position = $("#panel-content").scrollTop();
 		//get first panel for now (change to 'same' panel???)
 		current_panel = $(current_page).children('div:first');
@@ -275,15 +285,18 @@ $(document).ready(function() {
 	//listen for click on labels in deals panel
 	$('.link').on('mousedown', function(event) {
 		event.preventDefault();
-		$('.label').fadeOut(1000);
-		$('.dealtxt').fadeOut(1000);
-		$('.dealimg').fadeOut(1000);
+		//'$(this).parent().children' targets only the current page
+		$(this).parent().children('.label').fadeOut(500);
+		$(this).parent().find('.dealtxt').css('display','none')
+		$(this).parent().find('.dealimg').fadeOut(1000);
 		var active_index = $(this).attr('class').split(" ")[4].split("-")[1];
-		$('.deal'+active_index).fadeIn(1000);
+		$(this).parent().children('.deal'+active_index).fadeIn(1000);
+		$(this).parent().find('.deal'+active_index).fadeIn(2000);
 		//adjust the panel container position
-		if(active_index==2){ $('.deal-container').css('top','6vw');	}
-		else if(active_index==3){ $('.deal-container').css('top','8.5vw'); }
-		else { $('.deal-container').css('top','3.5vw');	}
+		if(active_index==2){ $(this).parent().children('.deal-container').css('top','6vw');	}
+		else if(active_index==3){ $(this).parent().children('.deal-container').css('top','8.5vw'); }
+		else if(active_index==4){ $(this).parent().children('.deal-container').css('top','11vw'); }
+		else { $(this).parent().children('.deal-container').css('top','3.5vw');	}
 	});
 
 });//end of document-ready code
