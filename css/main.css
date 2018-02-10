@@ -47,6 +47,14 @@ table {
 }
 
 /* custom css starts here... */
+
+	/*getting rid of scrollbar in chrome*/
+::-webkit-scrollbar {
+	display: none;
+}
+::-moz-scrollbar {
+	display: none;
+}
 body {
 	font-family: 'Roboto Condensed';
 	font-size: 1.25vw;
@@ -341,7 +349,7 @@ section #logo-link {/*extra one in section to complete the square*/
 	padding-left: 1vw;
 }
 #panel-content .bigital {
-	font-size: 1vw;	
+	font-size: 1vw;
 }
 #homestay_activities p {
 	width: 80%;
