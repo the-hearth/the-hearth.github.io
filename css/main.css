@@ -232,6 +232,7 @@ section #logo-link {/*extra one in section to complete the square*/
 	width: 100%;
 	/*border: .1vw solid red;*/
 	text-align: left;
+	font-size: 1vw;	
 }
 .write-form form textarea {
 	width: 65%;
@@ -426,30 +427,33 @@ section #logo-link {/*extra one in section to complete the square*/
 #homestay_activities p {
 	width: 80%;
 }
-/*booking now*/
-#panel-content form {
+/*book now*/
+#panel-content .book_now form {
 	position: relative;
 	top: 1vw;
 	left: 0;
 	width: 100%;
+	font-size: 1vw;
 }
-#panel-content form input {
+#panel-content .book_now form input {
 	margin: 0.5vw 0;
 }
-#panel-content form select option[data-default] {
+#panel-content .book_now form select option[data-default] {
   color: #888;
 }
-#panel-content form #date-input {
+#panel-content .book_now form #date-input {
 	width: 41.5%;
 }
-#panel-content form #num-input {
+#panel-content .book_now form #num-input {
 	width: 17.5%;
 }
-#panel-content form textarea {
+#panel-content .book_now form textarea {
+	position: relative;
+	top: 0.5vw;
 	width: 62.5%;
 	margin: 1vw 0 0 0.2vw;
 }
-#panel-content form #submit {
+#panel-content .book_now form #submit {
 	margin-left: 0.2vw;
 }
 /*contact us*/
@@ -457,11 +461,27 @@ section #logo-link {/*extra one in section to complete the square*/
 	text-align: center;
 	width: 100%;
 }
-#panel-content .contact-us #map {
+#panel-content .contact-us form {
 	position: relative;
-	top: 2vw;
-	left: 20%;
-	width: 60%;
+	top: 0;
+	font-size: 1vw;
+}
+#panel-content .contact-us form input {
+	margin: 1vw 2vw 1vw 0;
+	width: 18vw;
+}
+#panel-content .contact-us form textarea {
+	position: relative;
+	top: 1vw;
+	width: 40.5vw;
+	height: 4vw;
+}
+#panel-content .contact-us form #submit {
+	margin-left: 8vw;
+	width: 6vw;
+}
+#map {
+	width: auto;
 	height: 20vw;
  }
 
