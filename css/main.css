@@ -48,13 +48,11 @@ table {
 
 /* custom css starts here... */
 
-	/*getting rid of scrollbar in chrome*/
+/*getting rid of scrollbars in chrome*/
 ::-webkit-scrollbar {
 	display: none;
 }
-::-moz-scrollbar {
-	display: none;
-}
+
 body {
 	font-family: 'Roboto Condensed';
 	font-size: 1.25vw;
@@ -179,7 +177,7 @@ section #logo-link {/*extra one in section to complete the square*/
 	height: 40vw;
 	top: 3vw;
 	left: 7vw;
-	z-index: 5;
+	z-index: 6;
 	/*border: .1vw solid black;*/
 }
 .right-tabs {
@@ -190,7 +188,7 @@ section #logo-link {/*extra one in section to complete the square*/
 .side-tabs ul li {
 	margin: 1vw 0;
 	padding: 4vw 0;
-	z-index: 5;
+	z-index: 6;
 	cursor: pointer; /* to make the hand cursor appear*/
 	/*border: .1vw solid red;*/
 }
@@ -210,6 +208,37 @@ section #logo-link {/*extra one in section to complete the square*/
 	left: 0;
 	width: 100%;
 	display: none;
+}
+.write-form {
+	position: absolute;
+	top: 20vw;
+	left: 50vw;
+	width: 27vw;
+	height: 20vw;
+	display: none;
+	z-index: 5;
+	/*border: .1vw solid black;*/
+}
+.write-form img {
+	position: absolute;
+	top: -7.25vw;
+	left: -6vw;
+	width: 140%;
+}
+.write-form form {
+	position: absolute;
+	top: 0vw;
+	left: 2vw;
+	width: 100%;
+	/*border: .1vw solid red;*/
+	text-align: left;
+}
+.write-form form textarea {
+	width: 65%;
+	height: 5vw;
+}
+.write-form form #submit {
+	margin-left: 13vw;
 }
 .panel-heading {
 	position: absolute;
@@ -249,7 +278,7 @@ section #logo-link {/*extra one in section to complete the square*/
 	width: 100%;
 }
 /*deals section - don't get intimidated*/
-#homestay_deals .deal-container, #hostel_deals .deal-container {
+#homestay_deals .deal-container, #hostel_deals .deal-container, #travels_adventures .deal-container {
 	position: relative;
 	top: 3.5vw;
 	left: 1vw;
@@ -260,24 +289,29 @@ section #logo-link {/*extra one in section to complete the square*/
 	z-index: 6;
 	outline: 0;
 	/*border: .1vw solid black;*/
-
 	overflow: auto;
 }
 #hostel_deals .deal-container {
 	width: 35vw;
 	height: 10vw;
 }
-#homestay_deals .dealtxt, #hostel_deals .dealtxt {
+#travels_adventures .deal-container {
+	width: 50vw;
+	height: 16.5vw;
+}
+#homestay_deals .dealtxt, #hostel_deals .dealtxt, #travels_adventures .dealtxt {
 	width: 100%;
 }
 #hostel_deals .right-align {
 	width: 95%;
 	text-align-last: right;
 }
-#homestay_deals .deal2, #homestay_deals .deal3, #hostel_deals .deal2, #hostel_deals .deal3, #hostel_deals .deal4 {
+#homestay_deals .deal2, #homestay_deals .deal3,
+	#hostel_deals .deal2, #hostel_deals .deal3, #hostel_deals .deal4,
+		#travels_adventures .deal2, #travels_adventures .deal3, #travels_adventures .deal4 {
 	display: none;
 }
-#homestay_deals .label, #hostel_deals .label {
+#homestay_deals .label, #hostel_deals .label, #travels_adventures .label {
 	position: absolute;
 	left: 2vw;
 	cursor: pointer;
@@ -287,45 +321,83 @@ section #logo-link {/*extra one in section to complete the square*/
 	padding-bottom: 1vw;
 }
 #homestay_deals .label1, #homestay_deals .label2, #homestay_deals .label4,
-	#hostel_deals .label1, #hostel_deals .label2, #hostel_deals .label4, #hostel_deals .label7 {
+	#hostel_deals .label1, #hostel_deals .label2, #hostel_deals .label4, #hostel_deals .label7,
+		#travels_adventures .label1, #travels_adventures .label2, #travels_adventures .label4, #travels_adventures .label7 {
 		top: 3vw;
 }
 #homestay_deals .label3, #homestay_deals .label5,
-	#hostel_deals .label3, #hostel_deals .label5, #hostel_deals .label8 {
+	#hostel_deals .label3, #hostel_deals .label5, #hostel_deals .label8,
+		#travels_adventures .label3, #travels_adventures .label5, #travels_adventures .label8 {
 		top: 5.5vw;
 }
-#homestay_deals .label6, #hostel_deals .label6, #hostel_deals .label9 {
+#homestay_deals .label6,
+	#hostel_deals .label6, #hostel_deals .label9 {
 	top: 8vw;
 }
 #hostel_deals .label10 {
 	top: 11vw;
 }
-#homestay_deals .label7, #hostel_deals .label11 {
+#travels_adventures .label9,  #travels_adventures .label6 {
+	top: 7.5vw;
+}
+#travels_adventures .label10 {
+	top: 10vw;
+}
+#homestay_deals .label7, #hostel_deals .label11, #travels_adventures .label11 {
 	bottom: 10vw;
 }
-#homestay_deals .label8, #homestay_deals .label9, #hostel_deals .label12, #hostel_deals .label14 {
+#homestay_deals .label8, #homestay_deals .label9,
+	#hostel_deals .label12, #hostel_deals .label14,
+		#travels_adventures .label12, #travels_adventures .label14 {
 	bottom: 7.5vw;
 }
-#hostel_deals .label13, #hostel_deals .label15, #hostel_deals .label16 {
+#hostel_deals .label13, #hostel_deals .label15, #hostel_deals .label16,
+	#travels_adventures .label13, #travels_adventures .label15, #travels_adventures .label16 {
 	bottom: 5vw;
 }
 .label:hover {
 	cursor: pointer;
 }
-#homestay_deals .dealimg, #hostel_deals .dealimg {
+#homestay_deals .dealimg, #hostel_deals .dealimg, #travels_adventures .dealimg {
 	position: absolute;
 	top: -10vw;
 	left: -6vw;
 	width: 110%;
 }
 /*deals section over, phew...*/
-
 #homestay_tariffs img, #hostel_tariffs img {
 	position: relative;
 	width: 60%;
 }
 #homestay_tariffs .extend {
 	padding-bottom: 12vw;
+}
+/*travel adventure and boutique are above with deals*/
+#travels_shoestring .label {
+	position: absolute;
+	top: 2.5vw;
+	left: 2vw;
+}
+#travels_shoestring .deal-container {
+	position: relative;
+	top: 6vw;
+	left: 1.5vw;
+	width: 50vw;
+	height: 22vw;
+	padding-right: 2vw;
+	margin-bottom: 6vw;
+	z-index: 6;
+	outline: 0;
+	overflow: auto;
+}
+#travels_shoestring .dealtxt {
+	width: 100%;
+}
+#travels_shoestring .dealimg {
+	position: absolute;
+	top: -10vw;
+	left: -5vw;
+	width: 110%;
 }
 #panel-content h1 {
 	font-size: 1.5vw;
@@ -354,6 +426,7 @@ section #logo-link {/*extra one in section to complete the square*/
 #homestay_activities p {
 	width: 80%;
 }
+/*booking now*/
 #panel-content form {
 	position: relative;
 	top: 1vw;
@@ -379,6 +452,18 @@ section #logo-link {/*extra one in section to complete the square*/
 #panel-content form #submit {
 	margin-left: 0.2vw;
 }
+/*contact us*/
+#panel-content .contact-us p {
+	text-align: center;
+	width: 100%;
+}
+#panel-content .contact-us #map {
+	position: relative;
+	top: 2vw;
+	left: 20%;
+	width: 60%;
+	height: 20vw;
+ }
 
 /*countdown page*/
 .landing, .mlanding, .mlanding2 {
