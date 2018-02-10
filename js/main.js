@@ -1,3 +1,18 @@
+//function for gmaps
+function myMap() {
+	var uluru = {lat: -25.363, lng: 131.044};
+  var mapOptions = {
+      center: uluru,
+      zoom: 10,
+      mapTypeId: google.maps.MapTypeId.SATELLITE
+  }
+	var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+	var marker = new google.maps.Marker({
+    position: uluru,
+    map: map
+  });
+}
+
 //function for resetting activity of tob-bottom tabs based on an index
 function switchtabs(ind) {
 	$('.top-bottom-tabs').find('li').css('cursor','pointer');
@@ -34,6 +49,7 @@ function getParameterByName(name, url) {
 //global variables
 var dynamic_content = getParameterByName('dc');//decide content of home-page based on url
 var scrollanim = false;
+var writeon = false;
 var position;
 var current_page;
 var current_panel;
@@ -105,10 +121,10 @@ $(document).ready(function() {
 		//for downwards scroll
 		if(position<$("#panel-content").scrollTop()){
 			position = $("#panel-content").scrollTop();
-			if(!scrollanim && position>cum_panelheight-frame_height*2/3 && $(current_panel).next().length>0){
+			if(!scrollanim && position>cum_panelheight-frame_height*2/3 && $(current_panel).next('div').length>0){
 				//update counters, change background
 				$('.panel-background').find('img:visible').fadeOut(500);
-				current_panel = $(current_panel).next();
+				current_panel = $(current_panel).next('div');
 				$('.panel-background').find('#'+$(current_panel).attr('id')).fadeIn(500);
 				cum_panelheight += $(current_panel).outerHeight();
 				//animate scroll to next
@@ -128,11 +144,11 @@ $(document).ready(function() {
 		//for upwards scroll
 		else if(position>$("#panel-content").scrollTop()){
 			position = $("#panel-content").scrollTop();
-			if(!scrollanim && position<cum_panelheight-$(current_panel).outerHeight()-frame_height/3 && $(current_panel).prev().length>0){
+			if(!scrollanim && position<cum_panelheight-$(current_panel).outerHeight()-frame_height/3 && $(current_panel).prev('div').length>0){
 				//update counters, change background
 				$('.panel-background').find('img:visible').fadeOut(500);
 				cum_panelheight -= $(current_panel).outerHeight();
-				current_panel = $(current_panel).prev();
+				current_panel = $(current_panel).prev('div');
 				$('.panel-background').find('#'+$(current_panel).attr('id')).fadeIn(500);
 				//animate scroll to previous
 				scrollanim = true;
@@ -158,16 +174,16 @@ $(document).ready(function() {
 			$('.panel-background').find('img:visible').fadeOut(500);
 			$(current_page).fadeOut(500);
 			if(event.which==37){//left arrow key
-				if($(current_page).prev().length>0){
-					current_page = $(current_page).prev();
+				if($(current_page).prev('article').length>0){
+					current_page = $(current_page).prev('article');
 				}
 				else {
 					current_page = $("#panel-content").children('article:last');
 				}
 			}
 			else {//right arrow key
-				if($(current_page).next().length>0){
-					current_page = $(current_page).next();
+				if($(current_page).next('article').length>0){
+					current_page = $(current_page).next('article');
 				}
 				else {
 					current_page = $("#panel-content").children('article:first');
@@ -227,6 +243,21 @@ $(document).ready(function() {
 	//listen for click on side tabs
 	$('.side-tabs').on('mousedown', 'li', function(event) {
 		event.preventDefault();
+		if($(this).attr('class')=='none'){
+			//do nothing
+			return;
+		}
+		else if($(this).attr('class')=='write'){
+			if(writeon){
+				$('.write-form').fadeOut(500);
+				writeon = false;
+			}
+			else {//pop up form
+				writeon = true;
+				$('.write-form').fadeIn(500);
+			}
+			return;
+		}
 		$('.panel-background').find('img:visible').fadeOut(500);
 		$(current_page).fadeOut(500);
 		current_page = $('#panel-content').find('.'+$(this).attr('class'));
@@ -291,7 +322,7 @@ $(document).ready(function() {
 	$('.link').on('mousedown', function(event) {
 		event.preventDefault();
 		//'$(this).parent().children' targets only the current page
-		$(this).parent().children('.label').fadeOut(500);
+		$(this).parent().find('.label').fadeOut(500);
 		$(this).parent().find('.dealtxt').css('display','none')
 		$(this).parent().find('.dealimg').fadeOut(1000);
 		var active_index = $(this).attr('class').split(" ")[4].split("-")[1];
