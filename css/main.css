@@ -232,7 +232,7 @@ section #logo-link {/*extra one in section to complete the square*/
 	width: 100%;
 	/*border: .1vw solid red;*/
 	text-align: left;
-	font-size: 1vw;	
+	font-size: 1vw;
 }
 .write-form form textarea {
 	width: 65%;
@@ -279,7 +279,7 @@ section #logo-link {/*extra one in section to complete the square*/
 	width: 100%;
 }
 /*deals section - don't get intimidated*/
-#homestay_deals .deal-container, #hostel_deals .deal-container, #travels_adventures .deal-container {
+#homestay_deals .deal-container, #hostel_deals .deal-container, #travels_adventures .deal-container, #travels_boutique .deal-container {
 	position: relative;
 	top: 3.5vw;
 	left: 1vw;
@@ -296,11 +296,11 @@ section #logo-link {/*extra one in section to complete the square*/
 	width: 35vw;
 	height: 10vw;
 }
-#travels_adventures .deal-container {
+#travels_adventures .deal-container, #travels_boutique .deal-container {
 	width: 50vw;
 	height: 16.5vw;
 }
-#homestay_deals .dealtxt, #hostel_deals .dealtxt, #travels_adventures .dealtxt {
+#homestay_deals .dealtxt, #hostel_deals .dealtxt, #travels_adventures .dealtxt, #travels_boutique .dealtxt {
 	width: 100%;
 }
 #hostel_deals .right-align {
@@ -309,10 +309,11 @@ section #logo-link {/*extra one in section to complete the square*/
 }
 #homestay_deals .deal2, #homestay_deals .deal3,
 	#hostel_deals .deal2, #hostel_deals .deal3, #hostel_deals .deal4,
-		#travels_adventures .deal2, #travels_adventures .deal3, #travels_adventures .deal4 {
+		#travels_adventures .deal2, #travels_adventures .deal3, #travels_adventures .deal4,
+			#travels_boutique .deal2, #travels_boutique .deal3, #travels_boutique .deal4 {
 	display: none;
 }
-#homestay_deals .label, #hostel_deals .label, #travels_adventures .label {
+#homestay_deals .label, #hostel_deals .label, #travels_adventures .label, #travels_boutique .label {
 	position: absolute;
 	left: 2vw;
 	cursor: pointer;
@@ -323,12 +324,14 @@ section #logo-link {/*extra one in section to complete the square*/
 }
 #homestay_deals .label1, #homestay_deals .label2, #homestay_deals .label4,
 	#hostel_deals .label1, #hostel_deals .label2, #hostel_deals .label4, #hostel_deals .label7,
-		#travels_adventures .label1, #travels_adventures .label2, #travels_adventures .label4, #travels_adventures .label7 {
+		#travels_adventures .label1, #travels_adventures .label2, #travels_adventures .label4, #travels_adventures .label7,
+			#travels_boutique .label1, #travels_boutique .label2, #travels_boutique .label4, #travels_boutique .label7 {
 		top: 3vw;
 }
 #homestay_deals .label3, #homestay_deals .label5,
 	#hostel_deals .label3, #hostel_deals .label5, #hostel_deals .label8,
-		#travels_adventures .label3, #travels_adventures .label5, #travels_adventures .label8 {
+		#travels_adventures .label3, #travels_adventures .label5, #travels_adventures .label8,
+			#travels_boutique .label3, #travels_boutique .label5, #travels_boutique .label8 {
 		top: 5.5vw;
 }
 #homestay_deals .label6,
@@ -338,28 +341,31 @@ section #logo-link {/*extra one in section to complete the square*/
 #hostel_deals .label10 {
 	top: 11vw;
 }
-#travels_adventures .label9,  #travels_adventures .label6 {
+#travels_adventures .label9,  #travels_adventures .label6,
+	#travels_boutique .label9,  #travels_boutique .label6 {
 	top: 7.5vw;
 }
-#travels_adventures .label10 {
+#travels_adventures .label10, #travels_boutique .label10 {
 	top: 10vw;
 }
-#homestay_deals .label7, #hostel_deals .label11, #travels_adventures .label11 {
+#homestay_deals .label7, #hostel_deals .label11, #travels_adventures .label11 , #travels_boutique .label11 {
 	bottom: 10vw;
 }
 #homestay_deals .label8, #homestay_deals .label9,
 	#hostel_deals .label12, #hostel_deals .label14,
-		#travels_adventures .label12, #travels_adventures .label14 {
+		#travels_adventures .label12, #travels_adventures .label14,
+		 	#travels_boutique .label12, #travels_boutique .label14 {
 	bottom: 7.5vw;
 }
 #hostel_deals .label13, #hostel_deals .label15, #hostel_deals .label16,
-	#travels_adventures .label13, #travels_adventures .label15, #travels_adventures .label16 {
+	#travels_adventures .label13, #travels_adventures .label15, #travels_adventures .label16,
+	 	#travels_boutique .label13, #travels_boutique .label15, #travels_boutique .label16 {
 	bottom: 5vw;
 }
 .label:hover {
 	cursor: pointer;
 }
-#homestay_deals .dealimg, #hostel_deals .dealimg, #travels_adventures .dealimg {
+#homestay_deals .dealimg, #hostel_deals .dealimg, #travels_adventures .dealimg, #travels_boutique .dealimg  {
 	position: absolute;
 	top: -10vw;
 	left: -6vw;
@@ -373,13 +379,16 @@ section #logo-link {/*extra one in section to complete the square*/
 #homestay_tariffs .extend {
 	padding-bottom: 12vw;
 }
+#travels_educational .extend {
+	padding-bottom: 20vw;
+}
 /*travel adventure and boutique are above with deals*/
-#travels_shoestring .label {
+#travels_shoestring .label, #travels_healing .label, #travels_customise .label {
 	position: absolute;
 	top: 2.5vw;
 	left: 2vw;
 }
-#travels_shoestring .deal-container {
+#travels_shoestring .deal-container, #travels_healing .deal-container, #travels_customise .deal-container {
 	position: relative;
 	top: 6vw;
 	left: 1.5vw;
@@ -391,10 +400,10 @@ section #logo-link {/*extra one in section to complete the square*/
 	outline: 0;
 	overflow: auto;
 }
-#travels_shoestring .dealtxt {
+#travels_shoestring .dealtxt, #travels_healing .dealtxt, #travels_customise .dealtxt  {
 	width: 100%;
 }
-#travels_shoestring .dealimg {
+#travels_shoestring .dealimg, #travels_healing .dealimg, #travels_educational .dealimg, #travels_customise .dealimg  {
 	position: absolute;
 	top: -10vw;
 	left: -5vw;
