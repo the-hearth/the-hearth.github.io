@@ -137,9 +137,8 @@ $(document).ready(function() {
 				$('.panel-background').find('#'+$(current_panel).attr('id')).fadeIn(500);
 				//animate scroll to previous
 				scrollanim = true;
-
 				$('#panel-content').animate(
-					{ scrollTop: cum_panelheight - frame_height +6},
+					{ scrollTop: cum_panelheight - $(current_panel).outerHeight() +6},
 					1000, function(){ scrollanim = false; }
 				);
 				position = $("#panel-content").scrollTop();
@@ -239,7 +238,7 @@ $(document).ready(function() {
 			}
 			else {//pop up form
 				writeon = true;
-				$('.write-form').fadeIn(1000);				
+				$('.write-form').fadeIn(1000);
 			}
 			return;
 		}
@@ -300,7 +299,7 @@ $(document).ready(function() {
 	//listen for click inside deals panel
 	$('.dealtxt').on('mousedown', function(event) {
 		event.preventDefault();
-		$('.deal-container').focus();
+		$(this).parent().focus();
 	});
 
 	//listen for click on labels in deals panel
@@ -313,6 +312,8 @@ $(document).ready(function() {
 		var active_index = $(this).attr('class').split(" ")[4].split("-")[1];
 		$(this).parent().children('.deal'+active_index).fadeIn(1000);
 		$(this).parent().find('.deal'+active_index).fadeIn(2000);
+		//scroll to top
+		$(this).parent().children('.deal-container').animate({ scrollTop: 0 }, 1000);
 		//adjust the panel container position
 		if(active_index==2){ $(this).parent().children('.deal-container').css('top','6vw');	}
 		else if(active_index==3){ $(this).parent().children('.deal-container').css('top','8.5vw'); }
