@@ -613,3 +613,8 @@ section #logo-link {/*extra one in section to complete the square*/
 	margin-left: 8vw;
 	width: 6vw;
 }
+/*about us*/
+#panel-content-nothome .about-us p {
+	font-size: 1.2vw;
+	line-height: 1.8vw;
+}
