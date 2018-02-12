@@ -1,29 +1,65 @@
 ---
-layout: default
+layout: null
 ---
+<!DOCTYPE html>
+<html lang="en">
 
-  <section class="constrain">
-    <article class="review mdl-card mdl-shadow--2dp">
+  <head>
+  	<meta charset="utf-8">
+  	<title>{{ site.title }} - Post</title>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,600" rel="stylesheet">
+  </head>
 
-      <div class="mdl-card__title">
-        <p class="mdl-card__title-text"><a href="{{ site.baseurl }}{{ post.url }}">
-          {{ page.title }}
-        </a></p>
+  <body>
+    <header>
+      <a href='/' id="logo-link"></a>
+      <img class="logo" src='/images/logo.png' alt="logo"></img>
+      <nav class="top-nav">
+        <ul>
+          <li><a href='/about_us'><img src='/images/about_us.png' alt='about us'></img></a></li>
+          <li><a href='/blog.html'><img src='/images/blog.png' alt='blog'></img></a></li>
+          <li><a href='/booknow.html'><img src='/images/book_now.png' alt='book now'></img></a></li>
+          <li><a href='/faq.html'><img src='/images/faq.png' alt='faq'></img></a></li>
+          <li><a href='/contact.html'><img src='/images/contact_us.png' alt='contact'></img></a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="panel-container">
+      <a href='/' id="logo-link"></a>
+      <div class="panel-background">
+        <img style="display:block;" src='/images/panel_background.png' alt="book now background"></img>
       </div>
 
-      <div class="mdl-card__supporting-text">
-        <p>Tags:
-          {% for category in page.categories %}
-            <a href="{{ site.baseurl }}/category/{{ category }}.html">
-              {{ category }}
-            </a> &nbsp {% comment %} non-breaking space {% endcomment %}
-          {% endfor %}
-        </p>
-        <div class="review__description">
-          {{ content }}
-        </div>
-      </div>
+      <div id="panel-content-nothome" tabindex="1">
+        <article style="display:block;" class="blog post">
+          <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ page.title }}</a></h1>
+          <p></br>Tags:
+            {% for category in page.categories %}
+              &nbsp<a class="posttag" href="#">
+                {{ category }}
+              </a>
+            {% endfor %}</br>
+          </p>
+          <div>
+            {{ content }}
+          </div>
+        </article>
 
-    </article>
-  </section>
-</div>
+        <article style="display:block;" class="blogindex">
+      		<div>
+      			<h1>Index</br></br></h1>
+      			<h2 style="text-decoration:none;"><a href="/blog.html">Back to Main Blog Page</a></h2>
+      		</div>
+      		<img style="display:block;" src='/images/index_background.png' alt="index background"></img>
+      	</article>
+      </div>
+    </section>
+
+    <!-- jquery-3 -->
+    <script src="/js/jquery-3.1.1.min.js"></script>
+    <!-- custom js -->
+    <script src="/js/main.js"></script>
+  </body>
+</html>

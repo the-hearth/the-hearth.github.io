@@ -1,41 +1,35 @@
-<div class="constrain-left">
-	{% for post in site.posts %}
-		<article class="review mdl-card mdl-shadow--2dp">
-
-			<div class="mdl-card__title">
-				<p class="mdl-card__title-text"><a href="{{ site.baseurl }}{{ post.url }}">
-					{{ post.title }}
-				</a></p>
-			</div>
-
-			<div class="mdl-card__supporting-text">
-				<p>Tags:
-					{% for category in post.categories %}
-						<a href="{{ site.baseurl }}/category/{{ category }}.html">
-							{{ category }}
-						</a> &nbsp {% comment %} non-breaking space {% endcomment %}
-					{% endfor %}
-				</p>
-				<div class="review__description">
-					{{ post.content }}
-				</div>
-			</div>
-
-		</article>
-	{% endfor %}
-</div>
-
-<div class="constrain-right">
-	<article class="review mdl-card mdl-shadow--2dp">
-		<div class="mdl-card__title">
-			<p class="mdl-card__title-text">
-				<a href="{{ site.baseurl }}/category/All.html">
-					Index
-				</a>
+{% for post in site.posts %}
+	<article style="display:block;" class="blog">
+			<h1><a href="{{ site.baseurl }}{{ post.url }}">
+						{{ post.title }}
+					</a>
+			</h1>
+			<p class="postdate">{{ post.date | date: "%-d %B %Y" }}</p>
+			<p>Tags:
+				{% for category in post.categories %}
+					&nbsp<a class="posttag" href="#">
+						{{ category }}
+					</a>
+				{% endfor %}</br>
 			</p>
-		</div>
-		<div class="mdl-card__supporting-text">
-			{% include posts-list.html %}
-		</div>
+			<p class="postcontent">
+				{{ post.content }}
+			</p>
+			<p></br></br>___________________________________________________________________________________________</br></br></p>
 	</article>
-</div>
+{% endfor %}
+
+	<article style="display:block;" class="blogindex">
+		<div>
+			<h1>Index</br></br></h1>
+			<h2>All Posts</h2>
+			<ul>
+			  {% for post in site.posts %}
+			    <li>
+			      <p><a href="{{ post.url }}">{{ post.title }}</a></p>
+			    </li>
+			  {% endfor %}
+			</ul>
+		</div>
+		<img style="display:block;" src='images/index_background.png' alt="index background"></img>
+	</article>

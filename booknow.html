@@ -6,7 +6,7 @@ layout: null
 
   <head>
   	<meta charset="utf-8">
-  	<title>{{ site.title }}</title>
+  	<title>{{ site.title }} - Booking</title>
     <link rel="stylesheet" type="text/css" href="/css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,600" rel="stylesheet">
   </head>
@@ -18,7 +18,7 @@ layout: null
       <nav class="top-nav">
         <ul>
           <li><a href='#'><img src='images/about_us.png' alt='about us'></img></a></li>
-          <li><a href='#'><img src='images/blog.png' alt='blog'></img></a></li>
+          <li><a href='blog.html'><img src='images/blog.png' alt='blog'></img></a></li>
           <li><a href='home.html'><img src='images/home.png' alt='book now'></img></a></li>
           <li><a href='#'><img src='images/faq.png' alt='faq'></img></a></li>
           <li><a href='contact.html'><img src='images/contact_us.png' alt='contact'></img></a></li>
@@ -34,11 +34,25 @@ layout: null
 
       <img class="panel-heading" src='images/book_now.png' alt='book now'></img>
 
-      <div id="panel-content" tabindex="1" style="visibility:visible;">
+      <div id="panel-content-nothome" tabindex="1">
         <article style="display:block;" class="book_now">
 
-          <p class="bigp">Please call and confirm availabilty with a member of our team before making a payment.</br>
-            <a href="https://www.instamojo.com/@thehearth/lbdb3d7bdfe654ca580be32504d04fb01/" rel="im-checkout" data-behaviour="remote" data-style="light" data-text="Make Payment"></a>
+          <p>Please call (+91 9419222262, +91 9004603113) to confirm availabilty and amount with a member of our team before making any payment.</br>
+          </p>
+
+          <form class="pay-amount">
+          </br><select class="pay" name="pay">
+              <option value="" selected data-default>Select Amount</option>
+              <option value="1000">Rs. 1000</option>
+              <option value="2000">Rs. 2000</option>
+              <option value="5000">Rs. 5000</option>
+              <option value="10000">Rs. 10000</option>
+            </select>
+          </form>
+
+          <a href="" rel="im-checkout" data-behaviour="remote" data-style="light" data-text="Make Payment"></a>
+
+          <p>
             In case you can't get through leave your email-id with your preferences below and we'll get back to you within a day.
             Thank you.</br><br>
           </p>
@@ -61,7 +75,7 @@ layout: null
               <option value="hostel">hostel</option>
               <option value="travel"></option>
             </select>
-            <textarea name="message" placeholder="A little bit about yourself"></textarea>
+            <textarea name="message" placeholder=" Anything else?"></textarea>
             <input type="hidden" name="_next" value="http://thehearth.in/home.html">
             </br><input id="submit" type="submit" value="Send">
           </form>

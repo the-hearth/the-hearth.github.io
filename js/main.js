@@ -33,6 +33,7 @@ function getParameterByName(name, url) {
 
 //global variables
 var dynamic_content = getParameterByName('dc');//decide content of home-page based on url
+var blog_content = getParameterByName('bc');//decide content of blog-page based on url
 var scrollanim = false;
 var writeon = false;
 var position;
@@ -59,7 +60,24 @@ $(document).ready(function() {
 		$("section").fadeTo(3000, 1.0);
 	}, 8000);
 
-//initializing counters for scroll operations
+//check for dynamic blog content and load it
+	if(blog_content != null) {
+		//remove all blogs and indices
+		$('#panel-content-nothome').find('.blog').fadeOut(500);
+		$('#panel-content-nothome').find('.blogindex').find('li').fadeOut(500);
+		//load relevant blogs and indices
+		$('#panel-content-nothome').find('.posttag').each(function(index,element){
+			if($(element).text().search(blog_content)>-1){
+				$(element).parents('.blog').fadeIn(500);
+				var indxx = $('#panel-content-nothome').find('article').index($(element).parents('.blog'))+1;
+				$('#panel-content-nothome').find('.blogindex').find('li:nth-of-type('+indxx+')').fadeIn(500);
+			}
+		});
+		//insert tag in index title
+		$('#panel-content-nothome').find('.blogindex').find('h2').text(blog_content+' Posts');
+	}
+
+//home page: initializing counters for scroll operations 
 	current_page = $('#panel-content').find('article:first');
 	current_panel = $(current_page).find('div:first');
 	if(dynamic_content != null) {
@@ -267,7 +285,25 @@ $(document).ready(function() {
 		switchsidetabs(indx);
 	});
 
-	//listen for form select
+	//listen for pay amount select
+	$(".pay").change(function() {
+		if($(this).val()=='1000'){
+			$(".book_now").find('a').attr("href", "https://www.instamojo.com/@thehearth/l5f396a32dee149758ae06f415051a9de/");
+		}
+		else if($(this).val()=='2000'){
+			$(".book_now").find('a').attr("href", "https://www.instamojo.com/@thehearth/ld3ec8bc9d60447c3af2479c8f71ce8f8/");
+		}
+		else if($(this).val()=='5000'){
+			$(".book_now").find('a').attr("href", "https://www.instamojo.com/@thehearth/lba55c1fd07cb43aab0f400b403991da0/");
+		}
+		else if($(this).val()=='10000'){
+			$(".book_now").find('a').attr("href", "https://www.instamojo.com/@thehearth/l2a7dd43d666b4aa78601b06f1cde449a/");
+		}
+		else {
+			$(".book_now").find('a').attr("href", "");
+		}
+	});
+	//listen for service type select
 	$(".service").change(function() {
   	//alert($(this).val()+" option selected");
 		if($(this).val()=='homestay'){
@@ -319,6 +355,32 @@ $(document).ready(function() {
 		else if(active_index==3){ $(this).parent().children('.deal-container').css('top','8.5vw'); }
 		else if(active_index==4){ $(this).parent().children('.deal-container').css('top','11vw'); }
 		else { $(this).parent().children('.deal-container').css('top','3.5vw');	}
+	});
+
+	//listen for click on tags of posts
+	$('.posttag').on('mousedown', function(event) {
+		event.preventDefault();
+		var tag = $(this).text();
+		tag = $.trim(tag);
+		var add = "/blog.html?bc="+tag;
+		if($(this).parents('.post').length) {//if it's a post
+			$(this).attr("href", add);
+		}
+		else {
+			//remove all blogs and indices
+			$('#panel-content-nothome').find('.blog').fadeOut(500);
+			$('#panel-content-nothome').find('.blogindex').find('li').fadeOut(500);
+			//load relevant blogs and indices
+			$('#panel-content-nothome').find('.posttag').each(function(index,element){
+				if($(element).text().search(tag)>-1){
+					$(element).parents('.blog').fadeIn(500);
+					var indxx = $('#panel-content-nothome').find('article').index($(element).parents('.blog'))+1;
+					$('#panel-content-nothome').find('.blogindex').find('li:nth-of-type('+indxx+')').fadeIn(500);
+				}
+			});
+			//insert tag in index title
+			$('#panel-content-nothome').find('.blogindex').find('h2').text(tag+' Posts');
+		}
 	});
 
 });//end of document-ready code
