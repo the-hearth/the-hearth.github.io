@@ -247,7 +247,7 @@ section #logo-link {/*extra one in section to complete the square*/
 	top: 4vw;
 	left: 11vw;
 }
-#panel-content {
+#panel-content, #panel-content-nothome {
 	position: absolute;
 	top: 7vw;
 	left: 12vw;
@@ -260,19 +260,84 @@ section #logo-link {/*extra one in section to complete the square*/
 	text-align: left;
 	/*how to hide scroll bar??*/
 }
-#panel-content article {
+#panel-content article, #panel-content-nothome article {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	display: none;
 }
-#panel-content div {
+#panel-content-nothome .blog {
+	position: relative;
+	top: 1vw;
+	left: 2vw;
+	width: 60%;
+	display: block;
+}
+#panel-content-nothome .blogindex {
+	position: fixed;
+	top: 12.5vw;
+	left: 65vw;
+	width: 15%;
+	height: 32vw;
+	display: block;
+	overflow-y: auto;
+}
+#panel-content-nothome .blogindex div, #panel-content-nothome .blogindex img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 0;
+	width: 100%	;
+	z-index: 2;
+}
+#panel-content-nothome .blogindex div {
+	top: 1vw;
+	left: 1vw;
+	width: 90%;
+	z-index: 3;
+}
+#panel-content-nothome .blog h1, #panel-content-nothome .blogindex h1 {
+	padding: 0;
+}
+#panel-content-nothome .blog p, #panel-content-nothome .blogindex p {
+	font-size: 1.1vw;
+	line-height: 1.5vw;
+}
+#panel-content-nothome .blog .postdate {
+	text-align: right;
+}
+#panel-content-nothome .blog .postcontent {
+
+}
+#panel-content-nothome .blog a, #panel-content-nothome .blogindex a {
+	text-decoration: none;
+	color: black;
+	font-family: 'Roboto Condensed';
+}
+#panel-content-nothome .blogindex h2 {
+	text-decoration: underline;
+}
+#panel-content-nothome .blogindex li {
+	padding-top: 1vw;
+}
+#panel-content-nothome .blog .posttag {
+	font-style: italic;
+}
+#panel-content-nothome .blog img {
+	width: 38vw;
+	padding: 1vw 0;
+}
+
+#panel-content div, #panel-content-nothome div {
 	position: relative;
 	top: 0;
 	left: 0;
 	width: 100%;
 	padding: 2vw 0;
+}
+#panel-content-nothome div {
+
 }
 #homestay_edibles img, #hostel_edibles img {
 	position: relative;
@@ -409,19 +474,19 @@ section #logo-link {/*extra one in section to complete the square*/
 	left: -5vw;
 	width: 110%;
 }
-#panel-content h1 {
+#panel-content h1, #panel-content h1 {
 	font-size: 1.5vw;
 	padding: 0;
 }
-#panel-content h2 {
+#panel-content h2, #panel-content h2 {
 	font-size: 1.2vw;
 }
-#panel-content p {
+#panel-content p, #panel-content p {
 	line-height: 1.5vw;
 	font-size: 1vw;
 	width: 60%;
 }
-#panel-content p em {
+#panel-content p em, #panel-content p em {
 	font-weight: 600;
 }
 #panel-content .italp {
@@ -437,139 +502,67 @@ section #logo-link {/*extra one in section to complete the square*/
 	width: 80%;
 }
 /*book now*/
-#panel-content .book_now form {
+#panel-content-nothome .book_now a {
+	display: inline;
+	width: 12vw;
+	height: 1.5vw;
+	padding: 0.25vw;
+	position: absolute;
+	left: 48vw;
+	top: -2.2vw;
+}
+#panel-content-nothome .pay-amount select {
+	height: 3vw;
+}
+#panel-content-nothome .book_now form {
 	position: relative;
 	top: 1vw;
 	left: 0;
 	width: 100%;
 	font-size: 1vw;
 }
-#panel-content .book_now form input {
+#panel-content-nothome .book_now form input {
 	margin: 0.5vw 0;
 }
-#panel-content .book_now form select option[data-default] {
+#panel-content-nothome .book_now form select option[data-default] {
   color: #888;
 }
-#panel-content .book_now form #date-input {
+#panel-content-nothome .book_now form #date-input {
 	width: 41.5%;
 }
-#panel-content .book_now form #num-input {
+#panel-content-nothome .book_now form #num-input {
 	width: 17.5%;
 }
-#panel-content .book_now form textarea {
+#panel-content-nothome .book_now form textarea {
 	position: relative;
 	top: 0.5vw;
 	width: 62.5%;
 	margin: 1vw 0 0 0.2vw;
 }
-#panel-content .book_now form #submit {
+#panel-content-nothome .book_now form #submit {
 	margin-left: 0.2vw;
 }
 /*contact us*/
-#panel-content .contact-us p {
+#panel-content-nothome .contact-us p {
 	text-align: center;
 	width: 100%;
 }
-#panel-content .contact-us form {
+#panel-content-nothome .contact-us form {
 	position: relative;
 	top: 0;
 	font-size: 1vw;
 }
-#panel-content .contact-us form input {
+#panel-content-nothome .contact-us form input {
 	margin: 1vw 2vw 1vw 0;
 	width: 18vw;
 }
-#panel-content .contact-us form textarea {
+#panel-content-nothome .contact-us form textarea {
 	position: relative;
 	top: 1vw;
 	width: 40.5vw;
 	height: 4vw;
 }
-#panel-content .contact-us form #submit {
+#panel-content-nothome .contact-us form #submit {
 	margin-left: 8vw;
 	width: 6vw;
-}
-#map {
-	width: auto;
-	height: 20vw;
- }
-
-/*countdown page*/
-.landing, .mlanding, .mlanding2 {
-	position: relative;
-	top: 0;
-	width: 100vw;
-}
-.landing img, .mlanding img {
-	width: 100%;
-}
-.mlanding2 img {
-	width: 80%;
-}
-.mlanding {
-	display: none;
-}
-/*mobile screen*/
-@media only screen and (max-aspect-ratio:1/1){
-	.landing {display: none;}
-	.mlanding {display: block;}
-}
-footer {
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-	overflow: hidden;
-	text-align: center;
-	background-color: rgba(0, 0, 0, 0.8);
-	color: #eb5854;
-	padding: 0.5em;
-}
-footer p {
-	padding: 1em;
-}
-/*timer countdown*/
-.header {
-	overflow: hidden;
-	background-color: rgba(0, 0, 0, 0.8);
-	color: white;
-	width: 100vw;
-}
-.header div {
-  display: inline-block;
-  line-height: 1;
-  padding: 0.8vw 0.4vw;
-  font-size: 3vw;
-}
-.header span {
-  display: inline-block;
-	padding: 0 0.4vw;
-  font-size: 1.3vw;
-  color: white;
-}
-#days {
-  font-size: 5vw;
-  color: #db4844;
-}
-#hours, #minutes, #seconds {
-  font-size: 3vw;
-  color: #db4844;
-}
-/*mobile screen*/
-@media only screen and (max-aspect-ratio:1/1){
-	.header div {
-		padding: 1.5vw 9vw;
-		font-size: 6vw;
-	}
-	.header span {
-		padding: 0 0.6vw;
-	  font-size: 2vw;
-	}
-	#days {
-		font-size: 6vw;
-		padding: 1.5vw 0.6vw;
-	}
-	#hours, #minutes, #seconds {
-		font-size: 6vw;
-		padding: 1.5vw 0.6vw;
-	}
 }
