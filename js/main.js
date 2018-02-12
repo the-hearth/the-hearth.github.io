@@ -76,8 +76,13 @@ $(document).ready(function() {
 		//insert tag in index title
 		$('#panel-content-nothome').find('.blogindex').find('h2').text(blog_content+' Posts');
 	}
+//also... remove faq from blog page
+	if ($('#panel-content-nothome').find('article:first').attr('class')=='blog'){
+		$('#panel-content-nothome').find('.blog:last').css('display','none');
+		$('#panel-content-nothome').find('.blogindex').find('li:last').css('display','none');
+	}
 
-//home page: initializing counters for scroll operations 
+//home page: initializing counters for scroll operations
 	current_page = $('#panel-content').find('article:first');
 	current_panel = $(current_page).find('div:first');
 	if(dynamic_content != null) {

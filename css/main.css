@@ -56,6 +56,7 @@ table {
 body {
 	font-family: 'Roboto Condensed';
 	font-size: 1.25vw;
+	font-weight: 400;
 	text-align: center;
 	background-image: url('../images/background-paper.jpg');
 }
@@ -297,7 +298,7 @@ section #logo-link {/*extra one in section to complete the square*/
 	width: 90%;
 	z-index: 3;
 }
-#panel-content-nothome .blog h1, #panel-content-nothome .blogindex h1 {
+#panel-content-nothome .blog h1, #panel-content-nothome .blogindex h1, #panel-content-nothome .faq h1 {
 	padding: 0;
 }
 #panel-content-nothome .blog p, #panel-content-nothome .blogindex p {
@@ -307,8 +308,15 @@ section #logo-link {/*extra one in section to complete the square*/
 #panel-content-nothome .blog .postdate {
 	text-align: right;
 }
-#panel-content-nothome .blog .postcontent {
-
+#panel-content-nothome h2 {
+	font-size: 1.5vw;
+	line-height: 2.5vw;
+}
+#panel-content-nothome p {
+	line-height: 1.8vw;
+}
+#panel-content-nothome .faq .postcontent {
+	width: 95%;
 }
 #panel-content-nothome .blog a, #panel-content-nothome .blogindex a {
 	text-decoration: none;

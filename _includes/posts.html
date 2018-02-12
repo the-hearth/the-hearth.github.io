@@ -13,23 +13,8 @@
 				{% endfor %}</br>
 			</p>
 			<p class="postcontent">
-				{{ post.content }}
+				{{ post.content | markdownify }}
 			</p>
 			<p></br></br>___________________________________________________________________________________________</br></br></p>
 	</article>
 {% endfor %}
-
-	<article style="display:block;" class="blogindex">
-		<div>
-			<h1>Index</br></br></h1>
-			<h2>All Posts</h2>
-			<ul>
-			  {% for post in site.posts %}
-			    <li>
-			      <p><a href="{{ post.url }}">{{ post.title }}</a></p>
-			    </li>
-			  {% endfor %}
-			</ul>
-		</div>
-		<img style="display:block;" src='images/index_background.png' alt="index background"></img>
-	</article>
