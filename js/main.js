@@ -308,6 +308,7 @@ $(document).ready(function() {
 			$(".book_now").find('a').attr("href", "");
 		}
 	});
+	
 	//listen for service type select
 	$(".service").change(function() {
   	//alert($(this).val()+" option selected");

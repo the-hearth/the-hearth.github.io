@@ -20,6 +20,7 @@ layout: null
           <li><a href='aboutus.html'><img src='images/about_us.png' alt='about us'></img></a></li>
           <li><a href='blog.html'><img src='images/blog.png' alt='blog'></img></a></li>
           <li><a href='home.html'><img src='images/home.png' alt='book now'></img></a></li>
+          <li><a href='faq.html'><img src='images/faq.png' alt='faq'></img></a></li>
           <li><a href='contact.html'><img src='images/contact_us.png' alt='contact'></img></a></li>
         </ul>
       </nav>
@@ -36,38 +37,36 @@ layout: null
       <div id="panel-content-nothome" tabindex="1">
         <article style="display:block;" class="book_now">
 
-          <p>Please call (+91 9419222262, +91 9004603113) to confirm availabilty and amount with a member of our team before making any payment.</br>
-          </p>
-
           <form class="pay-amount">
-          </br><select class="pay" name="pay">
+            <p></br>Please call (+91 9419222262, +91 9004603113) to confirm availabilty and amount with a member of our team before making any payment.</br>
+              </br>
+            </p>
+            <select class="pay" name="pay">
               <option value="" selected data-default>Select Amount</option>
-              <option value="1000">Rs. 1000</option>
-              <option value="2000">Rs. 2000</option>
-              <option value="5000">Rs. 5000</option>
-              <option value="10000">Rs. 10000</option>
+              <option value="1000"> Rs. 1000</option>
+              <option value="2000"> Rs. 2000</option>
+              <option value="5000"> Rs. 5000</option>
+              <option value="10000"> Rs. 10000</option>
             </select>
+            <a href="" rel="im-checkout" data-behaviour="remote" data-style="light" data-text="Make Payment"></a>
+            <p>
+              In case you can't get through leave your email-id with your preferences below and we'll get back to you within a day.
+              Thank you.</br><br>
+            </p>
           </form>
 
-          <a href="" rel="im-checkout" data-behaviour="remote" data-style="light" data-text="Make Payment"></a>
-
-          <p>
-            In case you can't get through leave your email-id with your preferences below and we'll get back to you within a day.
-            Thank you.</br><br>
-          </p>
-
           <form action="https://formspree.io/thehearthstays@gmail.com" method="POST">
-            <input type="text" name="name" placeholder="Your Name">
-            <input type="email" name="email" placeholder="Your Email">
-            <input type="text" name="phone" placeholder="Phone Number">
+            <input type="text" name="name" placeholder=" Your Name">
+            <input type="email" name="email" placeholder=" Your Email">
+            <input type="text" name="phone" placeholder=" Phone Number">
             <select class="service" name="service">
               <option value="" selected data-default>Select Service</option>
               <option value="homestay">Homestay</option>
               <option value="hostel">Hostel</option>
               <option value="travel">Travels</option>
             </select>
-            <input id="date-input" type="text" name="dates" placeholder="Preferred Dates (Example: 28-May to 7-June)">
-            <input id="num-input" type="text" name="people" placeholder="Number of People">
+            <input id="date-input" type="text" name="dates" placeholder=" Preferred Dates (Example: 28-May to 7-June)">
+            <input id="num-input" type="text" name="people" placeholder=" Number of People">
             <select class='room' name="room">
               <option value="" selected data-default>Select Type</option>
               <option value="homestay">homestay</option>
