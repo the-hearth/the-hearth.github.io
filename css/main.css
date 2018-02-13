@@ -648,7 +648,7 @@ section #logo-link {/*extra one in section to complete the square*/
 }
 
 /*for mobile*/
-@media only screen and (max-aspect-ratio:16/11), only screen and (max-width : 768px) {
+@media only screen and (max-aspect-ratio:16/11), only screen and (max-width : 1023px) {
 	/*remove pc landing page*/
 	#landing-page, #panel-container, header {
 		display: none !important;
