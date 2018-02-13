@@ -660,21 +660,21 @@ section #logo-link {/*extra one in section to complete the square*/
 	#mlanding-page img {
 		position: relative;
 		width: 90%;
-		top: 4vh;
+		top: 6vh;
 		padding: 2vh 0;
 		z-index: 1;
 	}
 	#mlanding-page .mheader {
 		position: fixed;
 		top: 1vh;
-		height: 7vh;
+		height: 8vh;
 		width: 100%;
 		background-color: rgba(0, 0, 0, 0.6);
 		z-index: 2;
 	}
 	#mlanding-page h2 {
 		font-family: 'Roboto Condensed';
-		font-size: 2vh;
+		font-size: 2.8vh;
 		font-weight: 400;
 		padding: 1vh;
 		color: #84131C;
