@@ -74,7 +74,32 @@ section {
 }
 #landing-page img {
 	width: 100%;
+	z-index: 1;
 }
+.landing-tabs {
+	position: absolute;
+	display: inline-block;
+	width: 80vw;
+	height: 3vw;
+	top: 9vw;
+	left: 10vw;
+	z-index: 2;
+}
+.landing-tabs ul li {
+	display: inline;
+	margin: 0 2vw;
+}
+.landing-tabs ul li:first-child {
+	margin-left: 0;
+}
+.landing-tabs ul li:last-child {
+	margin-right: 0;
+}
+.landing-tabs ul li a {
+	padding: 2vw 12vw 4vw;
+	outline: 0;
+}
+
 h1 {
 	font-family: 'Roboto Condensed';
 	font-size: 1.5vw;
