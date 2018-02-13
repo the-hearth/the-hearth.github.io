@@ -52,7 +52,6 @@ table {
 ::-webkit-scrollbar {
 	display: none;
 }
-
 body {
 	font-family: 'Roboto Condensed';
 	font-size: 1.25vw;
@@ -62,6 +61,10 @@ body {
 }
 section {
 	opacity: 0.0;
+}
+/*remove mobile landing page*/
+#mlanding-page, #mheader  {
+	display: none !important;
 }
 #landing-page {
 	position: fixed;
@@ -617,4 +620,38 @@ section #logo-link {/*extra one in section to complete the square*/
 #panel-content-nothome .about-us p {
 	font-size: 1.2vw;
 	line-height: 1.8vw;
+}
+
+/*for mobile*/
+@media only screen and (max-aspect-ratio:16/11), only screen and (max-width : 768px) {
+	/*remove pc landing page*/
+	#landing-page, #panel-container, header {
+		display: none !important;
+	}
+
+	#mlanding-page {
+		display: block !important;
+	}
+	#mlanding-page img {
+		position: relative;
+		width: 90%;
+		top: 4vh;
+		padding: 2vh 0;
+		z-index: 1;
+	}
+	#mlanding-page .mheader {
+		position: fixed;
+		top: 1vh;
+		height: 7vh;
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.6);
+		z-index: 2;
+	}
+	#mlanding-page h2 {
+		font-family: 'Roboto Condensed';
+		font-size: 2vh;
+		font-weight: 400;
+		padding: 1vh;
+		color: #84131C;
+	}
 }
