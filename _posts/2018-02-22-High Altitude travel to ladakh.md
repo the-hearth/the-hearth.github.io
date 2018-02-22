@@ -4,7 +4,7 @@ title:  "High Altitude travel to Ladakh"
 categories: Altitude-management Care Prerequisites Ladakh 
 ---
 
-![](/images/blog 1.jpg)
+![high](/images/blog_1.jpg)
 
 
 Ladakh also known as the land of endless discoveries stands 11000ft high in the Indian Himalayas. Its a high altitude cold desert plateau harbouring the international borders of China on its north-east and Pakistan on its north-west. Awe inspiring landscape and screen waterbodies have appealed travellers to the region since it first opened to international tourist in 1984. Environmentalist have written extensively on the fragile high altitude eco system pertaining the ever expanding tourist industry as travellers seem to have a never ending affaire with these mountains calling them back to its winding trails.  
