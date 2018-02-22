@@ -3,7 +3,7 @@ layout: post
 title:  "High Altitude travel to Ladakh"
 categories: Altitude-management Care Prerequisites Ladakh 
 ---
-
+![Highaltitude Travel](/images/blogs_1.jpg)
 
 
 
@@ -19,6 +19,7 @@ The human body is an epitome of adaptation and so it can take the altitude of La
 
 
 ## Rest is best: 
+
 On arrival in Leh it is very important to avid physical exertion and any stressful routine. A complete rest for the first todays with good sleep cycles and staying indoors for the first couple of days will allow your body the time it needs to adapt to the thin air, scarcity of oxygen and dryness. Moderating your routine from mild to heavy workouts or walks will allow the cardio muscular movements to adapt to the oxygen inflow. 
 
 
