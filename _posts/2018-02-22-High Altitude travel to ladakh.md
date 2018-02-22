@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "High Altitude travel to Ladakh"
-
 ---
+
 ![HighaltitudeTravel](/images/blogs1.png)
 
 
