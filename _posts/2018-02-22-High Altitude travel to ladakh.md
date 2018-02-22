@@ -34,7 +34,7 @@ On arrival in Leh it is very important to avid physical exertion and any stressf
 <br/>
 
 A good diet plan with optimum intake of carbohydrates can help the body get energy and at the same time avoiding oily, fat rich food stressing our digestive system is advised. One of the major physiological shifts our body goes through as we enter Ladakh is dehydration. Travellers tend to loose a lot of fluids in Ladakh and due to less perception they hardly feel thirsty. Travellers should keep sipping on water, soups and other fluids and keep the body adequately hydrated.  
-<br/>
+<br/><br/>
 
 ## Leave the beer
 <br/>
@@ -55,6 +55,5 @@ Barren landscape of Ladakh makes it a dusty terrain and you never know when you 
 
 A journey can be explored better, if we read and prepare about the destination before landing there. So keeping in mind the above measures will help you to acclimatised and enjoy the natural splendour of the trans Himalayan region of Ladakh. Drink lot of water, sleep well and avoid alcohol and you will be fine to explore the beautiful mountain terrain and you will come back for ever more.
 
-<br/><br/>
 <br/><br/>
 P.C: Stanzin Khakyap
