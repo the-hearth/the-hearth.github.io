@@ -42,4 +42,4 @@ Barren landscape of Ladakh makes it a dusty terrain and you never know when you 
 <br/><br/>
 A journey can be explored better, if we read and prepare about the destination before landing there. So keeping in mind the above measures will help you to acclimatised and enjoy the natural splendour of the trans Himalayan region of Ladakh. Drink lot of water, sleep well and avoid alcohol and you will be fine to explore the beautiful mountain terrain and you will come back for ever more.
 <br/><br/>
-P.C: Stanzin Khakyap
+P.C: Stanzin Khakyab
