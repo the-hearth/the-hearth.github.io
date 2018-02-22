@@ -26,11 +26,11 @@ Anti altitude sickness pills or Acetazolamide can help and should be taken a day
 <br/>
 On arrival in Leh it is very important to avid physical exertion and any stressful routine. A complete rest for the first two days with good sleep cycles and staying indoors for the first couple of days will allow your body the time it needs to adapt to the thin air, scarcity of oxygen and dryness. Moderating your routine from mild to heavy workouts or walks will allow the cardio muscular movements to adapt to the oxygen inflow. 
 <br/><br/>
-## Proper diet and hydration: 
+## Proper diet and hydration
 <br/>
 A good diet plan with optimum intake of carbohydrates can help the body get energy and at the same time avoiding oily, fat rich food stressing our digestive system is advised. One of the major physiological shifts our body goes through as we enter Ladakh is dehydration. Travellers tend to loose a lot of fluids in Ladakh and due to less perception they hardly feel thirsty. Travellers should keep sipping on water, soups and other fluids and keep the body adequately hydrated.  
 <br/><br/>
-## Leave the beer
+## *Leave the beer*
 <br/>
 As we have already discussed how hydration plays an important role in combating mountain sickness, it goes without saying that alcohol is to be avoided strictly as it dehydration rates the body and can destroy your entire travel experience. You should cut down your consumption to a quarter of what you usually take only on the third day onwards. It is advised that for the first two days you should strictly stay away from any alcoholic drinks and bars. 
 <br/><br/>
