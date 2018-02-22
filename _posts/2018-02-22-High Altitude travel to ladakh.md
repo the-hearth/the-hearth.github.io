@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "High Altitude travel to Ladakh"
-categories: All Test
+categories: Altitude-management Care Prerequisites Ladakh 
 ---
 
 ![](/images/blog 1.jpg)
