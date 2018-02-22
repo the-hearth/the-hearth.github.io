@@ -1,8 +1,7 @@
 ---
 layout: post
 title:  "High Altitude travel to Ladakh"
-categories: High Altitude Sickness, Care, Prerequisites, 
-<br/>
+categories: High Altitude Sickness, Care, Prerequisites,
 Travelling Ladakh 2018, Leh,Ladakh
 
 ---
