@@ -37,5 +37,4 @@ Apart from the thin air, being close to the sun is another change effecting our 
 As we have already discussed how hydration plays an important role in combating mountain sickness, it goes without saying that alcohol is to be avoided strictly as it dehydration rates the body and can destroy your entire travel experience. You should cut down your consumption to a quarter of what you usually take only on the third day onwards. It is advised that for the first two days you should strictly stay away from any alcoholic drinks and bars. 
 
 
-
 A journey can be explored better, if we read and prepare about the destination before landing there. So keeping in mind the above measures will help you to acclimatised and enjoy the natural splendour of the trans Himalayan region of Ladakh. Drink lot of water, sleep well and avoid alcohol and you will be fine to explore the beautiful mountain terrain and you will come back for ever more.  
