@@ -17,8 +17,7 @@ As beautiful the high altitude region of Ladakh is, the challenges of traveling 
 <br/><br/>
 
 The human body is an epitome of adaptation and so it can take the altitude of Ladakh if we can pace the elevation rightly and restrict ourselves to limited bodily exertion and stress. Acclimatising for the body for high altitude travel starts a week before your trip with easy walks in the mornings to flex your muscles and the right cardio routine.
-<br/><br/>
-
+<br/><br/><br/>
 ## Acetazolamide or Diamox: Anti altitude prevention medication 
 <br/>
 Anti altitude sickness pills or Acetazolamide can help and should be taken a day before your flight to Leh or your ride from Manali to Serchu. This pill cane be taken at an interval of 6 hours (prescription of medical expert advised). Diamox is a popular Acetazolamide that helps in preventing acute mountain sickness (AMS), high altitude pulmonary edema (HAPE), and high altitude cerebral edema (HACE). However you should consult professional medical expert before taking any prevention pills.   
