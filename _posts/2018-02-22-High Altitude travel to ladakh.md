@@ -1,12 +1,14 @@
 ---
 layout: post
 title:  "High Altitude travel to Ladakh"
+categories: Altitude-management Care Prerequisites Ladakh 
 ---
 
 ![HighaltitudeTravel](/images/blogs_1.png)
 
 
 Ladakh also known as the land of endless discoveries stands 11000ft high in the Indian Himalayas. Awe inspiring landscape and serene waterbodies have appealed travellers to the region since it first opened to international tourist in 1984. Environmentalist have written extensively on the fragile high altitude eco system pertaining the ever expanding tourist industry.
+
 
 As beautiful the high altitude region of Ladakh is, the challenges of traveling to Ladakh can be felt with the first breath on your arrival. A major concern of travellers visiting Ladakh is combating the rise in altitude and the many effects it has on our physiology. Acute mountain sickness (AMS) typically occurs at about 8,000 feet, or 2,400 meters, above sea level with early symptoms of dizziness, nausea, headaches, and shortness of breath. However, mountain adventure enthusiasts and travellers can take measures to train the body to acclimatise to the altitude.
 
