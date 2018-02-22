@@ -30,7 +30,7 @@ On arrival in Leh it is very important to avid physical exertion and any stressf
 <br/>
 A good diet plan with optimum intake of carbohydrates can help the body get energy and at the same time avoiding oily, fat rich food stressing our digestive system is advised. One of the major physiological shifts our body goes through as we enter Ladakh is dehydration. Travellers tend to loose a lot of fluids in Ladakh and due to less perception they hardly feel thirsty. Travellers should keep sipping on water, soups and other fluids and keep the body adequately hydrated.  
 <br/><br/>
-## *Leave the beer*
+## Leave the beer
 <br/>
 As we have already discussed how hydration plays an important role in combating mountain sickness, it goes without saying that alcohol is to be avoided strictly as it dehydration rates the body and can destroy your entire travel experience. You should cut down your consumption to a quarter of what you usually take only on the third day onwards. It is advised that for the first two days you should strictly stay away from any alcoholic drinks and bars. 
 <br/><br/>
