@@ -2,6 +2,7 @@
 layout: post
 title:  "HIGH ALTITUDE TRAVEL TO LADAKH"
 categories: High Altitude Sickness, Care, Prerequisites, Travelling Ladakh 2018, Leh,Ladakh
+
 ---
 
 ![HighaltitudeTravel](/images/blogs_1.png)
@@ -46,8 +47,3 @@ A journey can be explored better, if we read and prepare about the destination b
 P.C: Stanzin Khakyab
 
 <br/><br/>
-
----
-categories: High Altitude Sickness, Care, Prerequisites, Travelling Ladakh 2018, Leh,Ladakh
-
----
