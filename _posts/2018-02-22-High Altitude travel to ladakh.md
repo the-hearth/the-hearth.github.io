@@ -46,5 +46,6 @@ P.C: Stanzin Khakyab
 <br/><br/>
 
 ---
-categories: High Altitude Sickness, Care, Prerequisites, Travelling Ladakh 2018, Leh,Ladakh
+categories: "High Altitude Sickness, Care, Prerequisites, Travelling Ladakh 2018, Leh,Ladakh"
+
 ---
