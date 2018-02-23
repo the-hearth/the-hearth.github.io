@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "HIGH ALTITUDE TRAVEL TO LADAKH"
+categories: High Altitude Sickness, Care, Prerequisites, Travelling Ladakh 2018, Leh,Ladakh
 ---
 
 ![HighaltitudeTravel](/images/blogs_1.png)
@@ -40,14 +41,13 @@ Apart from the thin air, being close to the sun is another change effecting our 
 Barren landscape of Ladakh makes it a dusty terrain and you never know when you will find yourself in the middle of a dusty breeze. Also contributing to this problem is the heavy infrastructure development Leh is going through. The roads are dug up, hotels and other tourism construction projects are coming up at every corner. We advise travellers to carry a pair of scarf, strolls and face masks to escape from tiny dust particles from entering your nasal cavity. Also keeping the nose and ears moist helps in optimising hydration of these parts. 
 <br/><br/>
 <br/><br/>
-A journey can be explored better, if we read and prepare about the destination before landing there. So keeping in mind the above measures will help you to acclimatised and enjoy the natural splendour of the trans Himalayan region of Ladakh. Drink lot of water, sleep well and avoid alcohol and you will be fine to explore the beautiful mountain terrain and you will come back for ever more.
+A journey can be explored better, if we read and prepare about the destination before landing there. So keeping in mind the above measures will help you to acclimatise and enjoy the natural splendour of the trans Himalayan region of Ladakh. Drink a lot of water, sleep well and avoid alcohol and you will be fine to explore the beautiful mountain terrain and you will come back for ever more.
 <br/><br/>
 P.C: Stanzin Khakyab
 
 <br/><br/>
 
 ---
-
 categories: High Altitude Sickness, Care, Prerequisites, Travelling Ladakh 2018, Leh,Ladakh
 
 ---
