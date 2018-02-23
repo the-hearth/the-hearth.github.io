@@ -45,7 +45,5 @@ A journey can be explored better, if we read and prepare about the destination b
 P.C: Stanzin Khakyab
 
 ---
-
 categories: ALL
-
 ---
