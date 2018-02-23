@@ -4,14 +4,7 @@
 						{{ post.title }}
 					</a>
 			</h1>
-			<p class="postdate">{{ post.date | date: "%-d %B %Y" }}</p>
-			<p>Tags:
-				{% for category in post.categories %}
-					&nbsp<a class="posttag" href="#">
-						
-					</a>
-				{% endfor %}</br>
-			</p>
+			<p>class="postdate">{{ post.date | date: "%-d %B %Y" }}</p>
 			<p class="postcontent">
 				{{ post.content | markdownify }}
 			
