@@ -38,6 +38,13 @@ layout: null
           <div>
             {{ content }}
           </div>
+          <p></br>Tags:
+            {% for category in page.categories %}
+              &nbsp<a class="posttag" href="#">
+                {{ category }}
+              </a>
+            {% endfor %}</br>
+          </p>
         </article>
 
         <article style="display:block;" class="blogindex">
