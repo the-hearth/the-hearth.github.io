@@ -35,13 +35,6 @@ layout: null
       <div id="panel-content-nothome" tabindex="1">
         <article style="display:block;" class="blog post">
           <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ page.title }}</a></h1>
-          <p></br>Tags:
-            {% for category in page.categories %}
-              &nbsp<a class="posttag" href="#">
-                {{ category }}
-              </a>
-            {% endfor %}</br>
-          </p>
           <div>
             {{ content }}
           </div>
