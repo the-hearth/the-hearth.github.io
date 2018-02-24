@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "HIGH ALTITUDE TRAVEL TO LADAKH"
-categories: All, test, workshop
 
 ---
 
