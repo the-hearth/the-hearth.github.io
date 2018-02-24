@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "HIGH ALTITUDE TRAVEL TO LADAKH"
-
+categories: All
 ---
 
 ![HighaltitudeTravel](/images/blogs_1.png)
