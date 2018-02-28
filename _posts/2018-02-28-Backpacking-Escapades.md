@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Backpacking Escapades"
+title: "BACKPACKING ESCAPADES"
 categories: Backpacking, Communities, Family, Sustainable, Homestay, Journeys, Stories, Landscapes, Responsible Travelling, 2018, Leh,Ladakh
 ---
 
