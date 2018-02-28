@@ -21,10 +21,12 @@ The other thing I discovered in homestay travels is that planning becomes homoge
 <br/><br/>
 The other expansion of my traveling horizon steered with different cuisines that runs in the bloodline of faraway cultures. In Asansol there is a different sweet for every season and the jaggery they use to make these sweets come from a family living in a village 150kms away. The texture, smell, right amount of sweetening and the wether it is made in, contributes to the exact taste being passed on as a heirloom from generations of sweet loving homemakers in West Bengal.  
 <br/><br/>
+![Backpacking Escapades](/images/blogs_2_c.png)
+<br/><br/>
 Such stories and encounters are met on journeys that belong as much to the travelled as it does to the traveler. The recent surge in backpacking youth in India and the ongoing flow of foreign backpackers traveling for their love of mystical India, is helping expand the country’s heritage beyond its palaces and forts and taking it to remote households and farm stays where the colourful diversity India lives. If for the reader traveling is about exploring further landscapes and in doing so enriching the inner soul then staying in homestays working on farms, singing community harvest songs is the way to go about it. To fall in love, smile, laugh and being open every moment on your journey is how traveling can change the traveller forever.
 <br/><br/>
 The amount of words I can pour into the idea of experiential travel can fill the literature of a small library in a monastery school library in a remote village of Ladakh but the following words of Marcel Proust sums up the feeling in a sentence I have always loved. “The real voyage of discovery consists not in seeking new landscapes, but in having new eyes.”
 <br/><br/>
 Author: Stanzin Namgyal
 <br/><br/>
-P.C.: Stanzin Namgyal, Purnima Das
+P.C.: Stanzin Namgyal, Purnima Das, Kristyna Carrot
