@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Backpacking Escapades"
-categories: Travel, High Altitude Sickness, Care, Prerequisites, Travelling Ladakh 2018, Leh,Ladakh
+categories: Backpacking, Communities, Family, Sustainable, Homestay, Journeys, Stories, Landscapes, Responsible Travelling, 2018, Leh,Ladakh
 ---
 
 ![Backpacking Escapades](/images/blogs_2_a.png)
