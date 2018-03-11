@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "HEARTH: An Alternative Tourism Initiative"
+title: "HEARTH: AN ALTERNATIVE TOURISM INITIATIVE"
 categories: Travel, Eco-tourism, Cold Desert, Fragile Ecosystem, Travelling Ladakh 2018, Infrastructure, Architecture, Local, Upcycle, Wood workshop, Leh,Ladakh
 ---
 <br/><br/>
