@@ -60,7 +60,7 @@ We also Screen-time three films (feature, art and documentary) every week to cin
 <br/><br/>
 Re-cycle is a program for cyclists to hire cycles from our pod and spread the message of carbon emission from motor driven commute. A portion of the collection from re-cycle goes to setting up cycle pods in local schools and public spaces. 
 <br/>![HighaltitudeTravel](/images/Blog_3_d.JPG)
-## Sustainable Travel
+## There is no thing such as waste, Just stuff in the wrong place.
 <br/>
 Apart from these in-house events we believe in building a better direction tourism in Ladakh can take, so that Ladakh as a destination is not promoted for its fancy hotels but for its eco friendly ways and age old cultural heritage. We believe that our initiative with 30 beds of change will eventually bring a wave of eco friendly travellers to experience Ladakh as it was back in the day when tourism had started in 1984. 
 Books like Ancient futures by _Helena Hodge 
