@@ -3,11 +3,11 @@ layout: post
 title: "HEARTH: An Alternative Tourism Initiative"
 categories: Travel, Eco-tourism, Care, Cold Desert, Fragile Ecosystem, Travelling Ladakh 2018, Infrastructure, Architecture, Local, Leh,Ladakh
 ---
-
-Sustainability as it so frequently appears in literature for safeguarding Earth’s resources, we want to find out what sustainability means to the tourism industry with Ladakh as an impact point. It is imperative for us to do so before we start our backpackers hostel (Leh) and homestay (Matho). We are conscious of setting up yet another lodging for tourists and dread contributing to the tourism led ecological and infrastructural chaos. 
+<br/><br/>
+Sustainability as it so frequently appears in literature is for safeguarding Earth’s resources, we want to find out what sustainability means to the tourism industry with Ladakh as an impact point. It is imperative for us to do so before we start our backpackers hostel (Leh) and homestay (Matho). We are conscious of setting up yet another lodging for tourists and dread contributing to the tourism led ecological and infrastructural chaos. 
 <br/>
 ![Procuring materials](/images/Blog_3_a.JPG)
-#The process of acquiring local materials from your neighbourhood brings you closer to the product.
+## The process of acquiring local materials from your neighbourhood brings you closer to the product.
 <br/>
 Ladakh at an altitude of 11000+ ft is the only cold desert fragile eco system in India. Its bare minimum indigenous glacial water sources, wet lands and bio diversity are optimum only for consumption of its sparkly populated 3 lack locals (Source: 2011 govt census). Moreover the ancient knowledge systems of Ladakh centre around principles of ecological conservation and resources management, which is taken for granted by the standardised needs of tourism and hospitality industry. 
 <br/><br/>
@@ -16,7 +16,7 @@ For example, more than 200 hotels and guest houses in Ladakh are supplying an av
 The architecture of Leh today is overtaken by the easy finance led infrastructure growth with multi-storey hotels coming up at every corner leaving Leh. With no character of its own, it is as good as any other hill station.
 <br/>
 ![Workshop](/images/Blog_3_b.JPG)
-##When team work makes the dream work.
+## When team work makes the dream work.
 <br/>
 When we started our project, we wanted to promote ecologically viable structures with locally available materials (preferably within 10 kms radius of the place) making sure these spaces engage both - the management and the guests - in values and practices of eco tourism. This turned out to be as farsighted in execution as it sounds in theory. Our first decision towards an ecological enterprise was looking at a possible restoration of our ancestral home into a small hostel than rebuilding a mammoth structure with foreign building materials like concrete slabs and ceramic tiles. Apart from its intrinsic value of strong stonewalls and local wood, an old building has local architectural elements that helps it to breathe like a timeless tree. Not to forget that restoration is as friendly to your pocket as it is for the neighbouring environment.
 <br/><br/>
@@ -24,10 +24,10 @@ Our in-house architect and one of the promoting partner Ms. Purnima Das (who pre
 <br/><br/>
 Measuring mud bricks and poplar sicks available in the vicinity as our basic building blocks and sketching possibilities of incorporating common spaces, restrooms and alleyways that are integral to our idea of spacing out the hostel marked our humble beginning of restoration. Most of the wood we sourced came from up-cycling piles of discarded furnitures, doors and windows from other construction sites, family backyards and military dump yards. We did procure fresh wood from the village in certain unavoidable situations but while doing so we made sure that no new trees were cut and these were organic exchange of surplus available with other households in Ladakh.   
 <br/><br/>
-![HighaltitudeTravel](/images/Blog_3_c.JPG)
-##Love what you do and do what you love and learn the art of constantly enjoying every minute of your life._Arch.B.V Doshi
+![Workshop](/images/Blog_3_c.JPG)
+## Love what you do and do what you love and learn the art of constantly enjoying every minute of your life._Arch.B.V Doshi
 
-<br/><br/>
+<br/>
 Purnima worked on the design, making ergonomic sense of converting a century old house into a hostel occupied by contemporary travellers with contemporary needs, like power sockets for each bed, a reading space, audio visual room, workshop area, workspace and socialising zones. Not to mention 4 baths and a community kitchen. 
 <br/><br/>
 She spent hours drawing in her sketch book: switching entries here, expanding exits there, adding supplementary staircases to enhance common space approaches, conceiving bunk beds and lockers made of up cycled poplar branches. A space to host dinner for 50 hungry travellers with live music in the background was to be placed within a local Ladakhi kitchen. 
@@ -36,8 +36,8 @@ By the time we had a basic restructuring design ready we had four carpenters wor
 <br/><br/>
 As important it is for us to get the space right so it is to incorporate ancient local wisdom for resource management and latest technological advancement for energy conservation to assure a healthy traveling lifestyle for our guests. 
 <br/>![HighaltitudeTravel](/images/Blog_3_e.JPG)
-##What did one wall say to another?
-Lets meet at the Corner._Arch. Anant D Raje
+## What did one wall say to another?
+## Lets meet at the Corner._Arch. Anant D Raje
 
 <br/>
 This brings me to the next phase of our project on operational utilities of our hostel and homestay. Apart from a spell bounding landscape, Ladakh also has 360 sunny days making it the most solar potential region in the country. We installed solar water heaters, back up power channels, parabolic cookers and charging units at both traveler projects through a battery bank in place. 
@@ -59,7 +59,9 @@ Similarly for photographers and analogue lovers passing by, we have curated the 
 We also Screen-time three films (feature, art and documentary) every week to cinema bugs and environmental enthusiasts. These documentaries on environment are followed by talks by different environmental organisations working on these subjects.   
 <br/><br/>
 Re-cycle is a program for cyclists to hire cycles from our pod and spread the message of carbon emission from motor driven commute. A portion of the collection from re-cycle goes to setting up cycle pods in local schools and public spaces. 
-<br/>![HighaltitudeTravel](/images/Blog_3_d.JPG)<br/>
+<br/>![HighaltitudeTravel](/images/Blog_3_d.JPG)
+## Sustainable Travel
+<br/>
 Apart from these in-house events we believe in building a better direction tourism in Ladakh can take, so that Ladakh as a destination is not promoted for its fancy hotels but for its eco friendly ways and age old cultural heritage. We believe that our initiative with 30 beds of change will eventually bring a wave of eco friendly travellers to experience Ladakh as it was back in the day when tourism had started in 1984. 
 Books like Ancient futures by _Helena Hodge 
 
