@@ -16,7 +16,7 @@ For example, more than 200 hotels and guest houses in Ladakh are supplying an av
 The architecture of Leh today is overtaken by the easy finance led infrastructure growth with multi-storey hotels coming up at every corner leaving Leh. With no character of its own, it is as good as any other hill station.
 <br/>
 ![Workshop](/images/Blog_3_b.JPG)
-## When team work makes the dream work.
+## Love what you do and do what you love and learn the art of constantly enjoying every minute of your life._Arch.B.V Doshi
 <br/>
 When we started our project, we wanted to promote ecologically viable structures with locally available materials (preferably within 10 kms radius of the place) making sure these spaces engage both - the management and the guests - in values and practices of eco tourism. This turned out to be as farsighted in execution as it sounds in theory. Our first decision towards an ecological enterprise was looking at a possible restoration of our ancestral home into a small hostel than rebuilding a mammoth structure with foreign building materials like concrete slabs and ceramic tiles. Apart from its intrinsic value of strong stonewalls and local wood, an old building has local architectural elements that helps it to breathe like a timeless tree. Not to forget that restoration is as friendly to your pocket as it is for the neighbouring environment.
 <br/><br/>
@@ -25,7 +25,7 @@ Our in-house architect and one of the promoting partner Ms. Purnima Das (who pre
 Measuring mud bricks and poplar sicks available in the vicinity as our basic building blocks and sketching possibilities of incorporating common spaces, restrooms and alleyways that are integral to our idea of spacing out the hostel marked our humble beginning of restoration. Most of the wood we sourced came from up-cycling piles of discarded furnitures, doors and windows from other construction sites, family backyards and military dump yards. We did procure fresh wood from the village in certain unavoidable situations but while doing so we made sure that no new trees were cut and these were organic exchange of surplus available with other households in Ladakh.   
 <br/>
 ![Workshop](/images/Blog_3_c.JPG)
-## Love what you do and do what you love and learn the art of constantly enjoying every minute of your life._Arch.B.V Doshi
+## When team work makes the dream work.
 <br/>
 Purnima worked on the design, making ergonomic sense of converting a century old house into a hostel occupied by contemporary travellers with contemporary needs, like power sockets for each bed, a reading space, audio visual room, workshop area, workspace and socialising zones. Not to mention 4 baths and a community kitchen. 
 <br/><br/>
