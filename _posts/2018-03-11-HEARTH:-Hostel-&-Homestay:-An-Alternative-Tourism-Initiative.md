@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "HEARTH: An Alternative Tourism Initiative"
-categories: Travel, Eco-tourism, Care, Cold Desert, Fragile Ecosystem, Travelling Ladakh 2018, Infrastructure, Architecture, Local, Leh,Ladakh
+categories: Travel, Eco-tourism, Cold Desert, Fragile Ecosystem, Travelling Ladakh 2018, Infrastructure, Architecture, Local, Upcycle, Wood workshop, Leh,Ladakh
 ---
 <br/><br/>
 Sustainability as it so frequently appears in literature is for safeguarding Earth’s resources, we want to find out what sustainability means to the tourism industry with Ladakh as an impact point. It is imperative for us to do so before we start our backpackers hostel (Leh) and homestay (Matho). We are conscious of setting up yet another lodging for tourists and dread contributing to the tourism led ecological and infrastructural chaos. 
