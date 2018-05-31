@@ -8,7 +8,7 @@ layout: null
   	<meta charset="utf-8">
   	<title>{{ site.title }} - Home</title>
     <link rel="stylesheet" type="text/css" href="/css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,600" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,600" rel="stylesheet">-->
   </head>
 
   <body>
@@ -91,13 +91,9 @@ layout: null
       <div id="panel-content" tabindex="1">
         <article class="homestay">
           <div id="homestay_stay">
-            <a class="lightbox" href="#view">
-              <img src='images/homestay_stay_map.png' alt="homestay map"></img>
+            <a href="images/homestay_stay_map.png">
+              <img src='images/homestay_stay_map.png' alt="Homestay Map"></img>
             </a>
-            <div class="lightbox-target" id="view">
-             <img src='images/homestay_stay_map.jpg' alt="homestay map"></img>
-             <a class="lightbox-close" href="#"></a>
-            </div>
             <p>Hearth homestay, Matho is an ancestral home restored into a lush living farm stay
               for travellers seeking a vacation in a mountain village ambiance, breathtaking
               walks and treks, holistic health and healing or to simply relax and unwind. Set 30
@@ -124,12 +120,16 @@ layout: null
           </div>
 
           <div id="homestay_facilities">
-            <img src='images/homestay_facilities.png' alt="homestay facilities"></img>
+            <a href="images/homestay_facilities_inv.png">
+              <img src='images/homestay_facilities.png' alt="Homestay Facilities"></img>
+            </a>
             <p></br></br>______________________________________________________________________________________________________________________________________</br></br></p>
           </div>
 
           <div id="homestay_edibles">
-            <img src='images/homestay_edibles_menu.png' alt="food menu"></img>
+            <a href="images/homestay_edibles_menu.png">
+              <img src='images/homestay_edibles_menu.png' alt="Homestay Food"></img>
+            </a>
             <p class="italp">* Our herbs, vegetables and cereals are grown at the farm, village and other farmers
               around Ladakh. The rice and oil we use comes from farms in Himachal and Srinagar.</br>
               * No chemical, GM seeds are used in our or any of the other farms we procure our food
@@ -255,9 +255,9 @@ layout: null
               </p>
             </section>
 
-            <img class="dealimg deal1" src='images/homestay_deals_1.png' alt="deal 1"></img>
-            <img class="dealimg deal2" src='images/homestay_deals_2.png' alt="deal 2"></img>
-            <img class="dealimg deal3" src='images/homestay_deals_3.png' alt="deal 3"></img>
+            <img class="dealimg deal1" src='images/homestay_deals_1.png' alt="deal 1" tabindex="-1"></img>
+            <img class="dealimg deal2" src='images/homestay_deals_2.png' alt="deal 2" tabindex="-1"></img>
+            <img class="dealimg deal3" src='images/homestay_deals_3.png' alt="deal 3" tabindex="-1"></img>
             <h1 class="label7 deal1 label link link-2">15 DAYS FARM RETREAT </h1>
             <h1 class="label8 deal1 label link link-3">HOSTED MEALS</h1>
             <h1 class="label9 deal2 label link link-3">HOSTED MEALS</h1>
@@ -301,7 +301,9 @@ layout: null
 
         <article class="hostel">
           <div id="hostel_stay">
-            <img src='images/hostel_stay_map.png' alt="hostel map"></img>
+            <a href="images/hostel_stay_map.png">
+              <img src='images/hostel_stay_map.png' alt="Hostel Map"></img>
+            </a>
             <p><em>‘Vasudevai kutumb kamb’ is Sanskrit for 'the world is a community'</em>
                 </br></br>Hearth hostel is a restored community space for soul travellers to stay, meet and share
                 their stories with the traveling community.
@@ -323,12 +325,16 @@ layout: null
           </div>
 
           <div id="hostel_facilities">
-            <img src='images/hostel_facilities.png' alt="hostel facilities"></img>
+            <a href="images/hostel_facilities.png">
+              <img src='images/hostel_facilities.png' alt="Hostel Facilities"></img>
+            </a>
             <p></br></br>______________________________________________________________________________________________________________________________________</br></br></br></br></p>
           </div>
 
           <div id="hostel_edibles">
-            <img src='images/hostel_edibles_menu.png' alt="food menu"></img>
+            <a href="images/hostel_edibles_menu.png">
+              <img src='images/hostel_edibles_menu.png' alt="Hostel Food"></img>
+            </a>
             <p class="italp">* Our herbs, vegetables and cereals are sourced from the farm, the village and other
               farmers around Ladakh. The rice and oil we use comes from farms in Himachal and
               Srinagar.</br>
@@ -443,7 +449,7 @@ layout: null
           <div id="hostel_tariffs">
             <h1>TARIFF CARD</br></br></br></h1>
             <img src='images/hostel_tariff_card.png' alt="food menu"></img>
-            <p class="italp bigital"></br></br>* Lenin change on third day is complementary. The above is on request for more.
+            <p class="italp bigital"></br></br>* Linen change on third day is complementary. The above is on request for more.
               </br></br>* Permits is issued for a minimum of 2 pax and is valid for a week from the date of issue
               </br></br>* Meals menu is given below and will adapt as per available seasonal fruits/veg/herbs.
               </br></br>* A deposit of 4000 rupees is mandatory for reserving each bed / room / cycle.
@@ -1693,6 +1699,8 @@ layout: null
     <script src="js/jquery-3.1.1.min.js"></script>
     <!-- custom js -->
     <script src="js/main.js"></script>
+    <!-- gallery -->
+    {% include lightbox.html %}
 
   </body>
 </html>

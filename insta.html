@@ -6,9 +6,9 @@ layout: null
 
   <head>
   	<meta charset="utf-8">
-  	<title>{{ site.title }} - Blog</title>
+  	<title>{{ site.title }} - Instafeed</title>
     <link rel="stylesheet" type="text/css" href="/css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,600" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,600" rel="stylesheet">-->
   </head>
 
   <body>
@@ -18,9 +18,9 @@ layout: null
       <nav class="top-nav">
         <ul>
           <li><a href='aboutus.html'><img src='images/about_us.png' alt='about us'></img></a></li>
-          <li><a href='home.html'><img src='images/home.png' alt='home'></img></a></li>
+          <li><a href='home.html'><img src='images/home.png' alt='blog'></img></a></li>
           <li><a href='booknow.html'><img src='images/book_now.png' alt='book now'></img></a></li>
-          <li><a href='blog.html'><img src='images/blog.png' alt='blog'></img></a></li>
+          <li><a href='faq.html'><img src='images/faq.png' alt='faq'></img></a></li>
           <li><a href='contact.html'><img src='images/contact_us.png' alt='contact'></img></a></li>
         </ul>
       </nav>
@@ -31,15 +31,21 @@ layout: null
       <div class="panel-background">
         <img style="display:block;" src='images/panel_background.png' alt="book now background"></img>
       </div>
-      <a href='faq.html' class="panel-heading">
-        <img src='images/faq.png' alt='blog'></img>
+      <a href='blog.html' class="panel-heading">
+        <img src='images/blog.png' alt='blog'></img>
       </a>
       <div id="panel-content-nothome" tabindex="1">
-        <article style="display:block;" class="faq">
-          <p class="postcontent">
-            {{ site.posts.last.content | markdownify }}
-          </p>
+
+        <div id="instafeed"></div>
+
+        <article style="display:block;" class="blogindex">
+          <div>
+            <h1><a href='blog.html'>Index</a></br></br></h1>
+            <h2><a href='blog.html'>Back to Main Blog Page</a></h2>
+          </div>
+          <img style="display:block;" src='images/index_background.png' alt="index background"></img>
         </article>
+
       </div>
     </section>
 
@@ -57,7 +63,18 @@ layout: null
 
     <!-- jquery-3 -->
     <script src="js/jquery-3.1.1.min.js"></script>
+    <!-- instafeed js -->
+    <script type="text/javascript" src="js/instafeed.min.js"></script>
+    <script type="text/javascript">
+        var feed = new Instafeed({
+            get: 'popular',
+            clientId: '5d457abc180f48b7824bb84dbc8f9987'
+        });
+        feed.run();
+        alert('number of images loaded: '+$('#instafeed').find('img').length());        
+    </script>
     <!-- custom js -->
     <script src="js/main.js"></script>
+
   </body>
 </html>
