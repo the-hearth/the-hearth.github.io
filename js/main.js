@@ -67,14 +67,14 @@ $(document).ready(function() {
 		$('#panel-content-nothome').find('.blogindex').find('li').fadeOut(500);
 		//load relevant blogs and indices
 		$('#panel-content-nothome').find('.posttag').each(function(index,element){
-			if($(element).text().search(blog_content)>-1){
+			if($.trim($(element).text())==blog_content){
 				$(element).parents('.blog').fadeIn(500);
 				var indxx = $('#panel-content-nothome').find('article').index($(element).parents('.blog'))+1;
 				$('#panel-content-nothome').find('.blogindex').find('li:nth-of-type('+indxx+')').fadeIn(500);
 			}
 		});
 		//insert tag in index title
-		$('#panel-content-nothome').find('.blogindex').find('h2').text(blog_content+' Posts');
+		$('#panel-content-nothome').find('.blogindex').find('h2').text(blog_content);
 	}
 //also... remove faq from blog page
 	if ($('#panel-content-nothome').find('article:first').attr('class')=='blog'){
@@ -176,7 +176,7 @@ $(document).ready(function() {
 
 	//listen for side arrow keys
 	$('#panel-content').keydown(function(event) {
-		if(event.which==37 || event.which==39){//side arrow
+		if( (event.which==37 || event.which==39) && !$('.lightbox').width() ){//side arrows
 			event.preventDefault();
 			$('.panel-background').find('img:visible').fadeOut(500);
 			$(current_page).fadeOut(500);
@@ -308,7 +308,7 @@ $(document).ready(function() {
 			$(".book_now").find('a').attr("href", "");
 		}
 	});
-	
+
 	//listen for service type select
 	$(".service").change(function() {
   	//alert($(this).val()+" option selected");
@@ -338,18 +338,12 @@ $(document).ready(function() {
 		}
 	});
 
-	//listen for click inside deals panel
-	$('.dealtxt').on('mousedown', function(event) {
-		event.preventDefault();
-		$(this).parent().focus();
-	});
-
 	//listen for click on labels in deals panel
 	$('.link').on('mousedown', function(event) {
 		event.preventDefault();
 		//'$(this).parent().children' targets only the current page
 		$(this).parent().find('.label').fadeOut(500);
-		$(this).parent().find('.dealtxt').css('display','none')
+		$(this).parent().find('.dealtxt').css('display','none');
 		$(this).parent().find('.dealimg').fadeOut(1000);
 		var active_index = $(this).attr('class').split(" ")[4].split("-")[1];
 		$(this).parent().children('.deal'+active_index).fadeIn(1000);
@@ -366,27 +360,13 @@ $(document).ready(function() {
 	//listen for click on tags of posts
 	$('.posttag').on('mousedown', function(event) {
 		event.preventDefault();
+		//update url
 		var tag = $(this).text();
 		tag = $.trim(tag);
 		var add = "/blog.html?bc="+tag;
-		if($(this).parents('.post').length) {//if it's a post
-			$(this).attr("href", add);
-		}
-		else {
-			//remove all blogs and indices
-			$('#panel-content-nothome').find('.blog').fadeOut(500);
-			$('#panel-content-nothome').find('.blogindex').find('li').fadeOut(500);
-			//load relevant blogs and indices
-			$('#panel-content-nothome').find('.posttag').each(function(index,element){
-				if($(element).text().search(tag)>-1){
-					$(element).parents('.blog').fadeIn(500);
-					var indxx = $('#panel-content-nothome').find('article').index($(element).parents('.blog'))+1;
-					$('#panel-content-nothome').find('.blogindex').find('li:nth-of-type('+indxx+')').fadeIn(500);
-				}
-			});
-			//insert tag in index title
-			$('#panel-content-nothome').find('.blogindex').find('h2').text(tag+' Posts');
-		}
+		window.history.pushState('','',add);
+		//direct to url
+		$(this).attr("href", add);		
 	});
 
 });//end of document-ready code
