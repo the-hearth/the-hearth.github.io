@@ -46,7 +46,7 @@ table {
 	border-spacing: 0;
 }
 
-/* custom css starts here... */
+
 
 /*getting rid of scrollbars in chrome*/
 ::-webkit-scrollbar {
@@ -61,6 +61,9 @@ body {
 }
 section {
 	opacity: 0.0;
+}
+img {
+	outline: 0;
 }
 /*remove mobile landing page*/
 #mlanding-page, #mheader  {
@@ -280,6 +283,11 @@ section #logo-link {/*extra one in section to complete the square*/
 	width: 8vw;
 	top: 4vw;
 	left: 11vw;
+	z-index: 9999;
+	outline: 0;
+}
+.panel-heading img {
+	width: 100%;
 }
 #panel-content, #panel-content-nothome {
 	position: absolute;
@@ -294,103 +302,6 @@ section #logo-link {/*extra one in section to complete the square*/
 	text-align: left;
 	/*how to hide scroll bar??*/
 }
-
-/*Making all content images into lightboxes*/
-
-	/* Styles the lightbox, removes it from sight and adds the fade-in transition */
-#panel-content .lightbox-target, #panel-content-nothome .lightbox-target {
-	position: fixed;
-	top: -100%;
-	width: 100%;
-	background: rgba(0,0,0,.7);
-	width: 100%;
-	opacity: 0;
-	-webkit-transition: opacity .5s ease-in-out;
-	-moz-transition: opacity .5s ease-in-out;
-	-o-transition: opacity .5s ease-in-out;
-	transition: opacity .5s ease-in-out;
-	overflow: hidden;
-}
-	/* Styles the lightbox image, centers it vertically and horizontally, adds the zoom-in transition and makes it responsive using a combination of margin and absolute positioning */
-#panel-content .lightbox-target img, #panel-content-nothome .lightbox-target img {
-	margin: auto;
-	padding: 2vh 0;
-	position: absolute;
-	top: 0;
-	left:0;
-	right:0;
-	bottom: 0;
-	max-height: 0%;
-	max-width: 0%;
-	box-shadow: 0px 0px 8px rgba(0,0,0,.3);
-	box-sizing: border-box;
-	-webkit-transition: .5s ease-in-out;
-	-moz-transition: .5s ease-in-out;
-	-o-transition: .5s ease-in-out;
-	transition: .5s ease-in-out;
-}
-	/* Styles the close link, adds the slide down transition */
-#panel-content a.lightbox-close, #panel-content-nothome a.lightbox-close {
-	display: block;
-	width:50px;
-	height:50px;
-	box-sizing: border-box;
-	background: white;
-	color: black;
-	text-decoration: none;
-	position: absolute;
-	top: -80px;
-	right: 0;
-	-webkit-transition: .5s ease-in-out;
-	-moz-transition: .5s ease-in-out;
-	-o-transition: .5s ease-in-out;
-	transition: .5s ease-in-out;
-}
-	/* Provides part of the "X" to eliminate an image from the close link */
-#panel-content a.lightbox-close:before, #panel-content-nothome a.lightbox-close:before {
-	content: "";
-	display: block;
-	height: 30px;
-	width: 1px;
-	background: black;
-	position: absolute;
-	left: 26px;
-	top:10px;
-	-webkit-transform:rotate(45deg);
-	-moz-transform:rotate(45deg);
-	-o-transform:rotate(45deg);
-	transform:rotate(45deg);
-}
-	/* Provides part of the "X" to eliminate an image from the close link */
-#panel-content a.lightbox-close:after, #panel-content-nothome a.lightbox-close:after {
-	content: "";
-	display: block;
-	height: 30px;
-	width: 1px;
-	background: black;
-	position: absolute;
-	left: 26px;
-	top:10px;
-	-webkit-transform:rotate(-45deg);
-	-moz-transform:rotate(-45deg);
-	-o-transform:rotate(-45deg);
-	transform:rotate(-45deg);
-}
-	/* Uses the :target pseudo-class to perform the animations upon clicking the .lightbox-target anchor */
-#panel-content .lightbox-target:target, #panel-content-nothome .lightbox-target:target {
-	opacity: 1;
-	top: 0;
-	bottom: 0;
-	z-index: 10;
-}
-#panel-content .lightbox-target:target img, #panel-content-nothome .lightbox-target:target img {
-	max-height: 100%;
-	max-width: 100%;
-}
-#panel-content .lightbox-target:target a.lightbox-close, #panel-content-nothome .lightbox-target:target a.lightbox-close {
-	top: 0px;
-}
-/*lightbox styling over!*/
 
 #panel-content article, #panel-content-nothome article {
 	position: absolute;
@@ -488,8 +399,8 @@ section #logo-link {/*extra one in section to complete the square*/
 	height: 20vw;
 	padding-right: 2vw;
 	margin-bottom: 6vw;
-	z-index: 6;
-	outline: 0;	
+	z-index: 8;
+	outline: 0;
 	overflow: auto;
 }
 #hostel_deals .deal-container {
@@ -577,6 +488,7 @@ section #logo-link {/*extra one in section to complete the square*/
 	top: -10vw;
 	left: -6vw;
 	width: 110%;
+	z-index: -1;
 }
 /*deals section over, phew...*/
 #homestay_tariffs img, #hostel_tariffs img {
