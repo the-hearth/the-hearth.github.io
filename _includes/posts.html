@@ -9,7 +9,14 @@
 			</p></br></br>
 			<p class="postdate">{{ post.date | date: "%-d %B %Y" }}</p>
 
+			<p></br></br>Tags:
+				{% for category in post.categories %}
+					&nbsp<a class="posttag" href="#">
+						{{ category }}
+					</a>
+				{% endfor %}</br>
+			</p>
 			<p></br></br>___________________________________________________________________________________________</br></br></p>
-	
+
 </article>
 {% endfor %}
