@@ -66,13 +66,20 @@ layout: null
     <!-- instafeed js -->
     <script type="text/javascript" src="js/instafeed.min.js"></script>
     <script type="text/javascript">
-        var feed = new Instafeed({
-            clientId: '2c66870fad7e4911b623f0ebb8e00354',
-            error: function() {
-              alert('error fetching images');
-            }
+      $(document).ready(function() {
+        var userFeed = new Instafeed({
+          get: 'user',
+          userId: '6865119451',
+          limit: 12,
+          resolution: 'standard_resolution',
+          accessToken: '6865119451.1677ed0.70b3637859ad48ddab7d7dfce21fb85d',
+          sortBy: 'most-recent',
+          error: function() {
+            alert("Sorry, can't fetch images right now");
+          }
         });
-        feed.run();
+        userFeed.run();
+      });
     </script>
     <!-- custom js -->
     <script src="js/main.js"></script>
