@@ -67,11 +67,13 @@ layout: null
     <script type="text/javascript" src="js/instafeed.min.js"></script>
     <script type="text/javascript">
         var feed = new Instafeed({
-            get: 'popular',
-            clientId: '5d457abc180f48b7824bb84dbc8f9987'
+            clientId: '5d457abc180f48b7824bb84dbc8f9987',
+            error: function() {
+              alert('error fetching images');
+            }
         });
         feed.run();
-        alert('number of images loaded: '+$('#instafeed').find('img').length());
+        //alert('number of images loaded: '+$('#instafeed').find('img').length());
     </script>
     <!-- custom js -->
     <script src="js/main.js"></script>
