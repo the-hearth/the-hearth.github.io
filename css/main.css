@@ -46,7 +46,11 @@ table {
 	border-spacing: 0;
 }
 
-
+/* custom css starts here... */
+@font-face {
+	font-family: 'Roboto Condensed';
+	src: url(font/RobotoCondensed-Regular.ttf);
+}
 
 /*getting rid of scrollbars in chrome*/
 ::-webkit-scrollbar {
@@ -63,6 +67,9 @@ section {
 	opacity: 0.0;
 }
 img {
+	outline: 0;
+}
+a {
 	outline: 0;
 }
 /*remove mobile landing page*/
@@ -377,6 +384,9 @@ section #logo-link {/*extra one in section to complete the square*/
 #panel-content-nothome .blog img {
 	width: 38vw;
 	padding: 1vw 0;
+}
+#panel-content-nothome .feedcontent {	
+	width: 48vw;
 }
 
 #panel-content div, #panel-content-nothome div {
