@@ -36,7 +36,9 @@ layout: null
       </a>
       <div id="panel-content-nothome" tabindex="1">
 
-        <div id="instafeed"></div>
+        <article style="display:block;" class="feedcontent">
+          <div id="instafeed"></div>
+        </article>
 
         <article style="display:block;" class="blogindex">
           <div>
@@ -71,12 +73,15 @@ layout: null
           get: 'user',
           userId: '6865119451',
           limit: 12,
-          resolution: 'standard_resolution',
+          resolution: 'low_resolution',
           accessToken: '6865119451.1677ed0.70b3637859ad48ddab7d7dfce21fb85d',
-          sortBy: 'most-recent',
+          sortBy: 'most-liked',
           error: function() {
-            alert("Sorry, can't fetch images right now");
-          }
+            alert("Sorry, can't fetch images right now, visit our instagram page instead");
+          },
+          {% raw %}//to prevent jekyll from interpreting this
+          template: '<a href="{{link}}" target="_blank"><img src="{{image}}" style="margin: 0.5vh; width: 45%; height: 22vw;" /></a>'
+          {% endraw %}
         });
         userFeed.run();
       });
