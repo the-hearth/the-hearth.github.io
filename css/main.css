@@ -318,13 +318,6 @@ section #logo-link {/*extra one in section to complete the square*/
 	width: 100%;
 	display: none;
 }
-#panel-content-nothome .about-us div {
-
-}
-#panel-content-nothome .about-us p {
-	font-size: 1vw;
-	line-height: 1.2vw;
-}
 #panel-content-nothome .blog {
 	position: relative;
 	top: 1vw;
@@ -403,6 +396,14 @@ section #logo-link {/*extra one in section to complete the square*/
 	left: 0;
 	width: 100%;
 	padding: 2vw 0;
+}
+#panel-content-nothome .about-us div {
+	width: auto;
+	padding: 0;
+}
+#panel-content-nothome .about-us p {
+	font-size: 1vw;
+	line-height: 1.2vw;
 }
 #homestay_edibles img, #hostel_edibles img {
 	position: relative;
