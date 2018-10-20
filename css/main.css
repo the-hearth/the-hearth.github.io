@@ -664,7 +664,9 @@ section #logo-link {/*extra one in section to complete the square*/
 /*about us*/
 #panel-content-nothome .about-us div {
 	width: auto;
+	height: auto;
 	padding: 0;
+	margin: 0;
 }
 #panel-content-nothome .about-us p {
 	font-size: 1.1vw;
