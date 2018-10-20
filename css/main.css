@@ -47,6 +47,11 @@ table {
 }
 
 /* custom css starts here... */
+
+/*getting rid of scrollbars in chrome*/
+::-webkit-scrollbar {
+	display: none;
+}
 @font-face {
 	font-family: 'Roboto Condensed';
 	src: url(font/RobotoCondensed-Regular.ttf);
@@ -315,8 +320,8 @@ section #logo-link {/*extra one in section to complete the square*/
 }
 #panel-content-nothome .about-us div {
 	position: relative;
-	left: -5%;
-	width: 90%;
+	left: -5vw;
+	top: -5vh;
 }
 #panel-content-nothome .about-us p {
 	font-size: 1vw;
