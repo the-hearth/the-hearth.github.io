@@ -667,7 +667,7 @@ section #logo-link {/*extra one in section to complete the square*/
 	height: auto;
 	padding: 0;
 	margin: 0;
-	top: -2vw;
+	top: -1vh;
 }
 #panel-content-nothome .about-us p {
 	font-size: 1.1vw;
