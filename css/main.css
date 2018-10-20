@@ -314,7 +314,9 @@ section #logo-link {/*extra one in section to complete the square*/
 	display: none;
 }
 #panel-content-nothome .about-us div {
-	width: 95%;
+	position: relative;
+	left: -5%;
+	width: 90%;
 }
 #panel-content-nothome .about-us p {
 	font-size: 1vw;
