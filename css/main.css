@@ -319,9 +319,7 @@ section #logo-link {/*extra one in section to complete the square*/
 	display: none;
 }
 #panel-content-nothome .about-us div {
-	position: relative;
-	left: -5vw;
-	top: -5vh;
+
 }
 #panel-content-nothome .about-us p {
 	font-size: 1vw;
