@@ -318,11 +318,11 @@ section #logo-link {/*extra one in section to complete the square*/
 	display: none;
 }
 #panel-content-nothome .about-us div {
-	width: 80%;
+	
 }
 #panel-content-nothome .about-us p {
-	font-size: 1.1vw;
-	line-height: 1.5vw;
+	font-size: 1vw;
+	line-height: 1.2vw;
 }
 #panel-content-nothome .blog {
 	position: relative;
