@@ -397,10 +397,6 @@ section #logo-link {/*extra one in section to complete the square*/
 	width: 100%;
 	padding: 2vw 0;
 }
-#panel-content-nothome .about-us div {
-	width: auto;
-	padding: 0;
-}
 #homestay_edibles img, #hostel_edibles img {
 	position: relative;
 	width: 100%;
@@ -666,6 +662,10 @@ section #logo-link {/*extra one in section to complete the square*/
 	width: 6vw;
 }
 /*about us*/
+#panel-content-nothome .about-us div {
+	width: auto;
+	padding: 0;
+}
 #panel-content-nothome .about-us p {
 	font-size: 1.2vw;
 	line-height: 1.8vw;
