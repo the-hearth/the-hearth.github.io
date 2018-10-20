@@ -52,10 +52,6 @@ table {
 	src: url(font/RobotoCondensed-Regular.ttf);
 }
 
-/*getting rid of scrollbars in chrome*/
-::-webkit-scrollbar {
-	display: none;
-}
 body {
 	font-family: 'Roboto Condensed';
 	font-size: 1.25vw;
@@ -318,7 +314,7 @@ section #logo-link {/*extra one in section to complete the square*/
 	display: none;
 }
 #panel-content-nothome .about-us div {
-	
+	width: 95%;
 }
 #panel-content-nothome .about-us p {
 	font-size: 1vw;
